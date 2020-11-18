@@ -1,4 +1,4 @@
-#Lesson 11 Udacity
+# EN FASE DE PRUEBAS
 
 import requests
 from requests.models import Response
@@ -44,6 +44,7 @@ def crawl_web(seed):
             crawled.append(page)
     return crawled
 
+#print (get_content(crawl_web("http://127.0.0.1:5500/testscrapper.html")))
 
 print (crawl_web("http://127.0.0.1:5500/testscrapper.html"))
 
