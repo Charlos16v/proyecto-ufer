@@ -1,0 +1,73 @@
+* {
+  box-sizing: content-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  height: 80px;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header p {
+  font-size: 36px;
+  margin-left: 36px;
+}
+
+header nav {
+  margin-right: 36px;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.services {
+}
+.services .container {
+  display: flex;
+  justify-content: center;
+}
+.services h2 {
+  text-align: center;
+}
+
+article {
+  width: 40%;
+  background: #ccc;
+  display: flex;
+}
+
+article .content {
+  width: 50%;
+  padding: 40px;
+}
+
+article .content h3 {
+  font-size: 34px;
+  text-align: center;
+  margin: 0;
+}
+
+article .content p {
+  font-size: 16px;
+  text-align: center;
+}
+
+article .content .features {
+  font-size: 16px;
+  text-align: center;
+}
+
+article img {
+  width: 50%;
+}
