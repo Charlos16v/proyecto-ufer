@@ -3,8 +3,9 @@
   font-family: "Open Sans", sans-serif;
 }
 
+/* Header */
+
 header {
-  height: 80px;
   width: 100%;
   background: #000;
   color: #fff;
@@ -21,53 +22,70 @@ header p {
 header nav {
   margin-right: 36px;
 }
+
 nav a {
   text-decoration: none;
   color: #fff;
   margin-left: 10px;
 }
 
-ul {
-  list-style: none;
-}
+/* Main */
 
-.services {
-}
-.services .container {
-  display: flex;
-  justify-content: center;
-}
 .services h2 {
   text-align: center;
 }
 
-article {
-  width: 40%;
-  background: #ccc;
+.services .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: auto;
 }
 
-article .content {
-  width: 50%;
-  padding: 40px;
+.services .container .product {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background: rgb(160, 120, 178);
+  border-radius: 10px;
 }
 
-article .content h3 {
-  font-size: 34px;
-  text-align: center;
-  margin: 0;
-}
-
-article .content p {
-  font-size: 16px;
-  text-align: center;
-}
-
-article .content .features {
-  font-size: 16px;
+h3.name,
+p.description {
   text-align: center;
 }
 
-article img {
-  width: 50%;
+.product_title p {
+  color: #ccc;
+}
+
+.product img {
+  width: 200px;
+  display: block;
+  margin: auto;
+}
+
+.product h4 {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.product li {
+  list-style: none;
+  line-height: 30px;
+}
+
+/* Footer */
+footer {
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  background: #000;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
 }
