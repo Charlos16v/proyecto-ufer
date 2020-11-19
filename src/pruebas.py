@@ -12,3 +12,7 @@ prices = tree.xpath('//span[@class="item-price"]/text()')
 print (buyers)
 print (prices)
 
+
+https://127.0.1.1:5000
+../html/services.html
+./index.html
