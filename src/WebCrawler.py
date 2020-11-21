@@ -46,7 +46,7 @@ def crawl_web(seed):
 
 #print (get_content(crawl_web("http://127.0.0.1:5500/testscrapper.html")))
 
-print (crawl_web("http://127.0.0.1:5500/testscrapper.html"))
+print (crawl_web("http://127.0.0.1:8000"))
 
 
 
