@@ -3,8 +3,15 @@
 import requests
 from requests.models import Response
 
+def repair_link(link):
+    if link.find("http://") == None:
+        link="http://"+link
+        return link
+    return link
 
-def get_content(url):
+
+
+def get_page(url):
     contenido = requests.get(url)
     return (contenido.text)
 
@@ -34,19 +41,24 @@ def get_all_links(page):
             break
     return links
 
-def crawl_web(seed):
+def crawl_web(seed,max_depth):
     tocrawl = [seed]
     crawled = []
-    while tocrawl:
+    next_depth = []
+    depth = 0
+    while tocrawl and depth <= max_depth:
         page = tocrawl.pop()
         if page not in crawled:
-            union(tocrawl,get_all_links(get_content(page)))
+            union(next_depth, get_all_links(get_page(page)))
             crawled.append(page)
+        if not tocrawl:
+            tocrawl, next_depth = next_depth, []
+            depth += 1
     return crawled
 
 #print (get_content(crawl_web("http://127.0.0.1:5500/testscrapper.html")))
 
-print (crawl_web("http://127.0.0.1:8000"))
+print(crawl_web("https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging",1))
 
 
 
