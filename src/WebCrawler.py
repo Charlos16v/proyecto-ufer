@@ -58,7 +58,7 @@ def crawl_web(seed,max_depth):
 
 #print (get_content(crawl_web("http://127.0.0.1:5500/testscrapper.html")))
 
-print(crawl_web("https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging",1))
+print(crawl_web("",1))
 
 
 
