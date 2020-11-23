@@ -70,12 +70,51 @@ p.description {
 
 .product h4 {
   font-weight: 400;
-  text-decoration: underline;
 }
 
 .product li {
   list-style: none;
   line-height: 30px;
+}
+
+/* Página de producto */
+
+section.product {
+  margin: auto;
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  padding: 40px;
+  color: #fff;
+}
+
+section.product img {
+  width: 60%;
+}
+
+section.product .content {
+  background: rgb(140, 82, 181);
+  width: 30%;
+  padding: 20px;
+}
+
+section.product .content h3 {
+  display: inline;
+  font-size: 26px;
+  border-bottom: 2px solid #fff;
+}
+
+section.product .content h4 {
+  text-align: center;
+}
+
+section.product .content h5 {
+  font-size: 16px;
+}
+
+section.product .content p,
+section.product .content li {
+  font-size: 14px;
 }
 
 /* Footer */
