@@ -4,6 +4,8 @@ import requests
 from requests.models import Response
 
 
+# repair_link se encarga de transformar los enlaces a ficheros "about.html" en un enlace con http:// y el respectivo dominio.
+
 def repair_link(link):
     if link.find("http://") == -1:
         link="http://127.0.0.1:5500/ufer/"+link
@@ -11,10 +13,14 @@ def repair_link(link):
     return link
 
 
+# get_page se encarga de hacer un request a la url indicada, devolviendo un response con el contenido html.
+
 def get_page(url):
     contenido = requests.get(url)
     return (contenido.text)
 
+
+# get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
 
 def get_next_target(page):
     start_link = page.find('<a href=')
@@ -26,11 +32,15 @@ def get_next_target(page):
     return url, end_quote
 
 
+# union se encarga de insertar el contenido de la lista "q" que no se encuentra en "p".
+
 def union(p,q):
     for e in q:
         if e not in p:
             p.append(e)
 
+
+# get_all_links se encarga de extraer
 
 def get_all_links(page):
     links = []
