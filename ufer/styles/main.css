@@ -3,6 +3,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+body {
+  background-color: #212121;
+}
+
 /* Header */
 
 header {
@@ -35,6 +39,7 @@ nav a:hover {
 
 .services h2 {
   text-align: center;
+  color: #f5f5f5;
 }
 
 .services .container {
@@ -48,34 +53,80 @@ nav a:hover {
 .services .container .product {
   width: 300px;
   margin: 20px;
-  padding: 20px;
-  background: rgb(160, 120, 178);
+  padding: 10px 40px;
+  background: rgb(140, 82, 181);
+  border: 2px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  color: #f5f5f5;
+  transition: 0.3s;
 }
 
-h3.name,
-p.description {
-  text-align: center;
+.services .container .product:hover {
+  border: 2px solid rgba(255, 255, 255, 1);
 }
 
-.product_title p {
-  color: #ccc;
+.services .container .product a {
+  text-decoration: none;
+  color: rgb(140, 82, 181);
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 30px auto;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.services .container .product a:hover {
+  border: 2px solid rgba(255, 255, 255, 1);
+  color: #fff;
+  background: rgb(140, 82, 181);
+}
+
+.product h3 {
+  font-size: 28px;
+}
+
+.product p {
+  line-height: 24px;
+  text-align: justify;
 }
 
 .product img {
   width: 200px;
   display: block;
   margin: auto;
+  align-self: flex-end;
 }
 
-.product h4 {
-  font-weight: 400;
+div#ufer_gold {
+  background: #000;
 }
 
-.product li {
-  list-style: none;
-  line-height: 30px;
+div#ufer_gold:hover {
+  border: 2px solid rgba(215, 185, 34, 1);
 }
+
+div#ufer_gold a {
+  color: rgb(215, 185, 34);
+}
+
+div#ufer_gold a:hover {
+  color: #fff;
+  background: rgb(215, 185, 34);
+}
+
+div#ufer_gold h3 {
+  color: rgb(215, 185, 34);
+}
+
+/* #ufer_gold img {
+  width: 200px;
+} */
 
 /* Página de producto */
 
@@ -96,6 +147,7 @@ section.product .content {
   background: rgb(140, 82, 181);
   width: 30%;
   padding: 20px;
+  border-radius: 10px;
 }
 
 section.product .content h3 {
@@ -115,6 +167,15 @@ section.product .content h5 {
 section.product .content p,
 section.product .content li {
   font-size: 14px;
+}
+
+section#ufer_gold .content {
+  background: #000;
+}
+
+section#ufer_gold .content h3 {
+  color: rgb(215, 185, 34);
+  border-bottom: 2px solid rgb(215, 185, 34);
 }
 
 /* Footer */
