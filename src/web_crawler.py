@@ -60,7 +60,7 @@ def crawl_web(seed,max_depth):
     return crawled
 
 
-print(crawl_web("http://127.0.0.1:5500/ufer/index.html",2))
+print(crawl_web("http://127.0.0.1:5500/ufer/services.html",2))
 
 
 
