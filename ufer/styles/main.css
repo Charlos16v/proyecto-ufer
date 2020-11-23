@@ -55,7 +55,7 @@ nav a:hover {
   margin: 20px;
   padding: 10px 40px;
   background: rgb(140, 82, 181);
-  border: 2px solid rgba(255, 255, 255, 0);
+  border: 3px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   display: flex;
   flex-wrap: wrap;
@@ -66,7 +66,7 @@ nav a:hover {
 }
 
 .services .container .product:hover {
-  border: 2px solid rgba(255, 255, 255, 1);
+  border: 3px solid rgba(255, 255, 255, 1);
 }
 
 .services .container .product a {
@@ -108,7 +108,7 @@ div#ufer_gold {
 }
 
 div#ufer_gold:hover {
-  border: 2px solid rgba(215, 185, 34, 1);
+  border: 3px solid rgba(215, 185, 34, 1);
 }
 
 div#ufer_gold a {
@@ -123,10 +123,6 @@ div#ufer_gold a:hover {
 div#ufer_gold h3 {
   color: rgb(215, 185, 34);
 }
-
-/* #ufer_gold img {
-  width: 200px;
-} */
 
 /* Página de producto */
 
