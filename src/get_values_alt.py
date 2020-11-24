@@ -22,8 +22,8 @@ def get_values(content):
 links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
 datos=[]
 for i in links:
-    putero.append((get_values(get_page(i))))
-print(datos)
-#print(putero)
+    datos.append((get_values(get_page(i))))
+print(links)
+#print(datos)
 
 
