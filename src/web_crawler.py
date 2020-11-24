@@ -8,7 +8,7 @@ from requests.models import Response
 
 def repair_link(link):
     if link.find("http://") == -1:
-        link="http://127.0.0.1:5500/ufer/"+link
+        link="https://charlos16v.github.io/proyecto-ufer/"+link
         return link
     return link
 
@@ -69,8 +69,6 @@ def crawl_web(seed,max_depth):
             depth += 1
     return crawled
 
-
-print(crawl_web("http://127.0.0.1:5500/ufer/services.html",2))
 
 
 
