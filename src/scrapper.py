@@ -2,7 +2,7 @@
 from web_crawler import crawl_web,get_page
 
 
-urls=crawl_web("http://127.0.0.1:5500/ufer/index.html",3)
+urls=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
 
 #for i in urls:
 
