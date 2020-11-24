@@ -1,23 +1,5 @@
 # EN FUNCIONAMIENTO
-
-import requests
-from requests.models import Response
-
-
-# repair_link se encarga de transformar los enlaces a ficheros "about.html" en un enlace con http:// y el respectivo dominio.
-
-def repair_link(link):
-    if link.find("http://") == -1:
-        link="https://charlos16v.github.io/proyecto-ufer/"+link
-        return link
-    return link
-
-
-# get_page se encarga de hacer un request a la url indicada, devolviendo un response con el contenido html.
-
-def get_page(url):
-    contenido = requests.get(url)
-    return (contenido.text)
+from mini_tools import repair_link,get_content
 
 
 # get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
@@ -54,6 +36,9 @@ def get_all_links(page):
             break
     return links
 
+
+# 
+
 def crawl_web(seed,max_depth):
     tocrawl = [seed]
     crawled = []
@@ -62,7 +47,7 @@ def crawl_web(seed,max_depth):
     while tocrawl and depth <= max_depth:
         page = tocrawl.pop()
         if page not in crawled:
-            union(next_depth, get_all_links(get_page(page)))
+            union(next_depth, get_all_links(get_content(page)))
             crawled.append(page)
         if not tocrawl:
             tocrawl, next_depth = next_depth, []
