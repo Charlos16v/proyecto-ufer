@@ -1,0 +1,411 @@
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background-color: #212121;
+  color: #f5f5f5;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 120px;
+}
+
+header p {
+  font-size: 32px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+header p:hover {
+  color: rgb(140, 82, 181);
+}
+
+header p span {
+  color: rgb(140, 82, 181);
+  transition: 0.5s;
+}
+header p:hover span {
+  color: #f5f5f5;
+}
+
+header p {
+  font-size: 32px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 700;
+  letter-spacing: 14px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+header p:hover {
+  color: rgb(140, 82, 181);
+}
+
+header p span {
+  color: rgb(140, 82, 181);
+  transition: 0.5s;
+}
+
+header p:hover span {
+  color: #f5f5f5;
+}
+
+header p:hover.gold {
+  color: rgb(215, 185, 34);
+}
+
+header p.gold span {
+  color: rgb(215, 185, 34);
+  transition: 0.5s;
+}
+
+header p.gold:hover span {
+  color: #f5f5f5;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  margin-left: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.5s;
+}
+
+nav a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+/* Landing Page */
+
+h2.title {
+  text-align: center;
+  font-size: 73px;
+  margin-bottom: 100px;
+}
+
+h2.title span {
+  color: rgb(140, 82, 181);
+  font-size: 84px;
+  border-bottom: 13px solid#fff;
+}
+
+section.landing {
+  margin: auto;
+}
+
+section.landing h3 {
+  font-size: 34px;
+}
+
+section.security {
+  margin: 100px;
+}
+
+section.security .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+section.security .container .feature {
+  width: 30%;
+  line-height: 24px;
+}
+
+section.security .container .feature h4 {
+  font-size: 24px;
+}
+
+section.security .container .feature img {
+  width: 50px;
+}
+
+section.services p.all {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+}
+
+section.services p.all a {
+  color: rgb(140, 82, 181);
+  text-decoration: none;
+  transition: 0.3s;
+  border-radius: 15px;
+}
+
+section.services p.all a:hover {
+  background: rgb(140, 82, 181);
+  color: #f5f5f5;
+  padding: 10px;
+}
+
+/* Services */
+
+.services .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+}
+
+.services .container .product {
+  width: 300px;
+  margin: 20px;
+  padding: 10px 40px;
+  background: rgb(140, 82, 181);
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.services .container .product:hover {
+  border: 3px solid rgba(255, 255, 255, 1);
+}
+
+.services .container .product a.button {
+  text-decoration: none;
+  color: rgb(140, 82, 181);
+  background: #fff;
+  border: 3px solid rgba(255, 255, 255, 0);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 30px auto;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.services .container .product a:hover.button {
+  border: 3px solid rgba(255, 255, 255, 1);
+  color: #fff;
+  background: rgb(140, 82, 181);
+}
+
+.product h3 {
+  font-size: 28px;
+}
+
+.product p {
+  line-height: 24px;
+  text-align: justify;
+}
+
+.services .container .gold {
+  width: 300px;
+  margin: 20px;
+  padding: 10px 40px;
+  background: rgb(0, 0, 0);
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.services .container .gold:hover {
+  border: 3px solid rgba(215, 185, 34, 1);
+}
+
+.services .container .gold a.button {
+  text-decoration: none;
+  color: rgb(215, 185, 34);
+  background: #fff;
+  border: 3px solid rgba(255, 255, 255, 0);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 30px auto;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.services .container .gold a:hover.button {
+  border: 3px solid rgba(255, 255, 255, 1);
+  color: #fff;
+  background: rgb(215, 185, 34);
+}
+
+.gold h3 {
+  font-size: 28px;
+  color: rgb(215, 185, 34);
+}
+
+.product img {
+  width: 200px;
+  display: block;
+  margin: auto;
+  align-self: flex-end;
+}
+
+/* Página de producto */
+
+section.product {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+section.product img {
+  width: 60%;
+}
+
+section.product .content {
+  background: rgb(140, 82, 181);
+  width: 30%;
+  padding: 60px;
+  border-radius: 10px;
+}
+
+section.product .content h3 {
+  display: inline;
+  font-size: 26px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #fff;
+}
+
+section.product .content h4 {
+  margin: 50px 0;
+  text-align: center;
+  line-height: 30px;
+}
+
+section.product .content h5 {
+  font-size: 28px;
+}
+
+section.product .content p,
+section.product .content li {
+  font-size: 18px;
+}
+
+section.gold .content {
+  background: #000;
+}
+
+section.gold .content h3 {
+  color: rgb(215, 185, 34);
+  border-bottom: 3px solid rgb(215, 185, 34);
+}
+
+/* About us */
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .container img {
+  width: 50%;
+}
+
+.about .container p {
+  width: 50%;
+  font-size: 32px;
+  padding: 50px;
+  line-height: 52px;
+}
+
+.about .container p::first-line {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.about .container p span {
+  color: rgb(140, 82, 181);
+}
+
+.about .container.pair {
+  flex-direction: row-reverse;
+}
+
+/* Footer */
+footer {
+  margin-top: 200px;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgb(140, 82, 181);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .social i {
+  padding: 0 10px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+footer img {
+  width: 150px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+footer.gold {
+  background: rgb(215, 185, 34);
+}
+
+/* Responsive design*/
+
+@media (max-width: 1200px) {
+  .about .container {
+    flex-wrap: wrap;
+  }
+
+  .about .container img {
+    width: 100%;
+  }
+
+  .about .container p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  section.security .container {
+    flex-wrap: wrap;
+  }
+
+  section.security .container .feature {
+    width: 100%;
+    font-size: 22px;
+  }
+}
