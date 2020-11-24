@@ -5,7 +5,7 @@
 from typing import Counter
 
 
-content=' <img src="./img/gold.svg" alt="Ufer Gold"> <div class="content"> <h3 id="name">Ufer Gold</h3> <h4 id="description">Ufer Gold offers the most luxury experience in the entire galaxy. Includes all the features and amenities you can imagine.</h4>'
+
 def get_name(content):
     content_pos=content.find('id="name">')
     start_pos=content.find(">",content_pos)
@@ -117,7 +117,7 @@ if __name__ == '__main__':
 
 
 
-content='<section class="product gold"><img src="./img/gold.svg" alt="Uber Gold"><div class="content"><h3 id="name">Ufer Gold</h3><h4 id="description">Ufer Gold offers the most luxury experience in the entire galaxy. Includes all the features and amenities you can imagine.</h4><div class="features"><p>Driver: <span id="driver">Autopilot</span></p><p>Passengers: <span id="passengers">1</span></p><p>Privacy: <span id="privacy">Private</span></p><p>Seats: <span id="seats">King Size</span></p><p>Propulsion System: <span id="propulsion">Photon Engine</span></p><p>Speed (Km/h): <span id="top_speed">1080000000</span></p><p>Price (¢/min): <span id="price">120</span></p><h5>Amenities:</h4><ul id="amenities"><li>WiFi</li><li>Bluetooth</li><li>Tinted Screens</li><li>HiFi Audio System</li><li>A/C</li><li>Champagne Bottle</li><li>Water</li><li>Snacks</li></ul> </div> </div> </section>'
+#content='<section class="product gold"><img src="./img/gold.svg" alt="Uber Gold"><div class="content"><h3 id="name">Ufer Gold</h3><h4 id="description">Ufer Gold offers the most luxury experience in the entire galaxy. Includes all the features and amenities you can imagine.</h4><div class="features"><p>Driver: <span id="driver">Autopilot</span></p><p>Passengers: <span id="passengers">1</span></p><p>Privacy: <span id="privacy">Private</span></p><p>Seats: <span id="seats">King Size</span></p><p>Propulsion System: <span id="propulsion">Photon Engine</span></p><p>Speed (Km/h): <span id="top_speed">1080000000</span></p><p>Price (¢/min): <span id="price">120</span></p><h5>Amenities:</h4><ul id="amenities"><li>WiFi</li><li>Bluetooth</li><li>Tinted Screens</li><li>HiFi Audio System</li><li>A/C</li><li>Champagne Bottle</li><li>Water</li><li>Snacks</li></ul> </div> </div> </section>'
 def get_amenities(content):
 
     content_pos=content.find('id="amenities">')
@@ -128,16 +128,16 @@ def get_amenities(content):
     amens=[]
     li_pos=0
 
-    for e in amenities_content:
-        if e == ">":
-            start_list_pos=amenities_content.find(e,li_pos)
-            end_list_pos=amenities_content.find("</li",li_pos)
-            amens.append(str(amenities_content[start_list_pos+1:end_list_pos]))
-            li_pos=end_list_pos+5
+#    for e in amenities_content:
+#        if e == ">":
+#            start_list_pos=amenities_content.find(e,li_pos)
+#            end_list_pos=amenities_content.find("</li",li_pos)
+#            amens.append(str(amenities_content[start_list_pos+1:end_list_pos]))
+#            li_pos=end_list_pos+5
 
-    return amens
+#    return amens
 
-print(get_amenities(content))
+#print(get_amenities(content))
 
 #if __name__ == '__main__':
 #    assert get_amenities('<section class="product gold"><img src="./img/gold.svg" alt="Uber Gold"><div class="content"><h3 id="name">Ufer Gold</h3><h4 id="description">Ufer Gold offers the most luxury experience in the entire galaxy. Includes all the features and amenities you can imagine.</h4><div class="features"><p>Driver: <span id="driver">Autopilot</span></p><p>Passengers: <span id="passengers">1</span></p><p>Privacy: <span id="privacy">Private</span></p><p>Seats: <span id="seats">King Size</span></p><p>Propulsion System: <span id="propulsion">Photon Engine</span></p><p>Speed (Km/h): <span id="top_speed">1080000000</span></p><p>Price (¢/min): <span id="price">120</span></p><h5>Amenities:</h4><ul id="amenities"><li>WiFi</li><li>Bluetooth</li><li>Tinted Screens</li><li>HiFi Audio System</li><li>A/C</li><li>Champagne Bottle</li><li>Water</li><li>Snacks</li></ul> </div> </div> </section>') == ["WiFi", "Bluetooth", "Tinted Screens", "HiFi Audio System", "A/C", "Champagne Bottle", "Water", "Snacks"]
