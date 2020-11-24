@@ -313,6 +313,37 @@ section.gold .content h3 {
   border-bottom: 3px solid rgb(215, 185, 34);
 }
 
+/* About us */
+.about .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about .container img {
+  width: 50%;
+}
+
+.about .container p {
+  width: 50%;
+  font-size: 32px;
+  padding: 50px;
+  line-height: 52px;
+}
+
+.about .container p::first-line {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+.about .container p span {
+  color: rgb(140, 82, 181);
+}
+
+.about .container.pair {
+  flex-direction: row-reverse;
+}
+
 /* Footer */
 footer {
   margin-top: 200px;
@@ -343,4 +374,38 @@ footer p {
 
 footer.gold {
   background: rgb(215, 185, 34);
+}
+
+/* Responsive design*/
+
+@media (max-width: 1200px) {
+  .about .container {
+    flex-wrap: wrap;
+  }
+
+  .about .container img {
+    width: 100%;
+  }
+
+  .about .container p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    width: 100%;
+  }
+
+  h3 {
+    text-align: center;
+  }
+  section.security .container {
+    flex-wrap: wrap;
+  }
+
+  section.security .container .feature {
+    width: 100%;
+    font-size: 22px;
+  }
 }
