@@ -1,38 +1,26 @@
-from web_crawler import crawl_web
-from mini_tools import string_to_list,get_content
+from int_detector import int_detector
+from string_to_list import string_to_list
 
 
-ufer_keys = ['name', 'description', 'driver', 'passengers', 'privacy', 'seats', 'propulsion', 'top_speed', 'price', 'amenities']
+UFER_KEYS = ['name', 'description', 'driver', 'passengers', 'privacy', 'seats', 'propulsion', 'top_speed', 'price', 'amenities']
 
 
 def get_values(content):
     ufer_values = []
-    for key in ufer_keys:
+    for key in UFER_KEYS:
         id_case=('id="' + str(key)+'">')
         content_pos = content.find(id_case)
         start_pos = content.find(">",content_pos)
         if key != "amenities":
             end_pos=content.find("<",start_pos+1)
-            ufer_values.append(content[start_pos+1:end_pos])
+            ufer_values.append(int_detector(content[start_pos+1:end_pos]))
         elif key == "amenities":
             end_pos=content.find("</ul",start_pos+1)
             ufer_values.append(string_to_list(content[start_pos+1:end_pos]))
     return ufer_values
 
 
+#print(get_values(get_content("https://charlos16v.github.io/proyecto-ufer/ufer_bus.html")))
 
-# En Obras
-links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
-###
 
-print(links)
-
-def get_values_on_links(links):
-    datos=[]
-    for i in links:
-        datos.append((get_values(get_content(i))))
-    return datos
-###
-
-#print(get_values_on_links(links))
 
