@@ -22,14 +22,17 @@ def get_values(content):
 
 
 # En Obras
-
-###
-#links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
-#datos=[]
-#for i in links:
-#    datos.append((get_values(get_content(i))))
-#print(datos)
+links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
 ###
 
+print(links)
 
+def get_values_on_links(links):
+    datos=[]
+    for i in links:
+        datos.append((get_values(get_content(i))))
+    return datos
+###
+
+#print(get_values_on_links(links))
 
