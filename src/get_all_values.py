@@ -1,3 +1,5 @@
+from get_values import get_values
+from get_content import get_content
 # En Obras
 #links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
 ###
