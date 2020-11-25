@@ -30,4 +30,4 @@ def get_content(url):
     body_pos = contenido.find("<body>")
     return (contenido[body_pos:])
 
-#print(get_content("https://charlos16v.github.io/proyecto-ufer/ufer_life.html"))
+print(get_content("https://charlos16v.github.io/proyecto-ufer/ufer_gold.html"))
