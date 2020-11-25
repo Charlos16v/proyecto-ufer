@@ -1,6 +1,6 @@
 # EN FUNCIONAMIENTO
-from mini_tools import repair_link,get_content
-
+from repair_link import repair_link
+from get_content import get_content
 
 # get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
 
@@ -37,7 +37,7 @@ def get_all_links(page):
     return links
 
 
-# 
+#
 
 def crawl_web(seed,max_depth):
     tocrawl = [seed]
