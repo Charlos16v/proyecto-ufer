@@ -24,8 +24,10 @@ def repair_link(link):
 # Funcion encargada de hacer un request y obtener el response en forma de string a partir de <body>.
 def get_content(url):
     contenido = requests.get(url)
-    contenido=contenido.text
-    contenido=contenido.replace("\r","")
+    contenido = contenido.text
+    contenido = contenido.replace("\r","")
     contenido = contenido.replace("\n","")
-    body_pos=contenido.find("<body>")
+    body_pos = contenido.find("<body>")
     return (contenido[body_pos:])
+
+#print(get_content("https://charlos16v.github.io/proyecto-ufer/ufer_life.html"))
