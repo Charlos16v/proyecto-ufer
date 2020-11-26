@@ -21,7 +21,7 @@ def get_values(content):
     return ufer_values
 
 
-print(make_dictionary(UFER_KEYS, get_values(get_content("https://charlos16v.github.io/proyecto-ufer/ufer_gold.html"))))
+#print(make_dictionary(UFER_KEYS, get_values(get_content("https://charlos16v.github.io/proyecto-ufer/ufer_gold.html"))))
 
 
 
