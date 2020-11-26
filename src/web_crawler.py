@@ -39,7 +39,7 @@ def get_all_links(page):
 
 
 def is_for_scrapp(link):
-    if get_content(link).find('id="' + str(UFER_KEYS[1])+'">') == -1:
+    if get_content(link).find('id="' + str(UFER_KEYS[0])+'">') == -1:
         return False
     else:
         return True
