@@ -1,6 +1,7 @@
 # EN FUNCIONAMIENTO
 from repair_link import repair_link
 from get_content import get_content
+from get_values_conf import UFER_KEYS
 
 # get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
 
@@ -37,7 +38,12 @@ def get_all_links(page):
     return links
 
 
-#
+def is_for_scrapp(link):
+    if get_content(link).find('id="' + str(UFER_KEYS[1])+'">') == -1:
+        return False
+    else:
+        return True
+
 
 def crawl_web(seed,max_depth):
     tocrawl = [seed]
@@ -48,11 +54,14 @@ def crawl_web(seed,max_depth):
         page = tocrawl.pop()
         if page not in crawled:
             union(next_depth, get_all_links(get_content(page)))
-            crawled.append(page)
+            if is_for_scrapp(page) == True:
+                crawled.append(page)
         if not tocrawl:
             tocrawl, next_depth = next_depth, []
             depth += 1
     return crawled
+
+#print(crawl_web("https://charlos16v.github.io/proyecto-ufer/index.html",3))
 
 
 
