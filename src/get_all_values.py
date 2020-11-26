@@ -6,7 +6,7 @@ from web_crawler import crawl_web
 from to_mongo import to_mongo
 
 # En Obras
-links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
+#links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
 ###
 
 #print(links)
@@ -19,4 +19,4 @@ def get_values_on_links(links):
 
 #print(get_values_on_links(links))
 
-get_values_on_links(links)
+get_values_on_links(crawl_web("https://charlos16v.github.io/proyecto-ufer/",3))
