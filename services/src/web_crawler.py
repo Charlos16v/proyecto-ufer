@@ -38,11 +38,12 @@ def get_all_links(page):
     return links
 
 
+#TESTEAR CAMBIO
 def is_for_scrapp(link):
-    if get_content(link).find('id="' + str(UFER_KEYS[0])+'">') == -1:
-        return False
-    else:
-        return True
+    for key in UFER_KEYS:
+        if get_content(link).find('id="' + str(key)+'">') == -1:
+            return False
+    return True
 
 
 def crawl_web(seed,max_depth):
