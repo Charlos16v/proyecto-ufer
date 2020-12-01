@@ -1,9 +1,9 @@
-from get_values import get_values
-from get_content import get_content
-from get_values_conf import UFER_KEYS
-from make_dictionary import make_dictionary
-from web_crawler import crawl_web
-from to_mongo import to_mongo
+from services.src.get_values import get_values
+from services.src.get_content import get_content
+from services.src.get_values_conf import UFER_KEYS
+from services.src.make_dictionary import make_dictionary
+from services.src.web_crawler import crawl_web
+from services.src.to_mongo import to_mongo
 
 # En Obras
 #links=crawl_web("https://charlos16v.github.io/proyecto-ufer/",3)
