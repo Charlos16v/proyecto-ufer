@@ -1,7 +1,7 @@
 # EN FUNCIONAMIENTO
 from .repair_link import repair_link
 from .get_content import get_content
-from .get_values_conf import UFER_KEYS
+from services.src.config.ufer_conf import UFER_KEYS
 
 # get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
 
@@ -62,7 +62,6 @@ def crawl_web(seed,max_depth):
             depth += 1
     return crawled
 
-#print(crawl_web("https://charlos16v.github.io/proyecto-ufer/index.html",3))
 
 
 
