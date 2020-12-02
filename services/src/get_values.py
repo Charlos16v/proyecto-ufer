@@ -1,9 +1,9 @@
-from services.src.make_dictionary import make_dictionary
-from services.src.int_detector import int_detector
-from services.src.string_to_list import string_to_list
-from services.src.make_dictionary import make_dictionary
-from services.src.get_content import get_content
-from services.src.get_values_conf import UFER_KEYS,UFER_TYPE
+from .make_dictionary import make_dictionary
+from .int_detector import int_detector
+from .string_to_list import string_to_list
+from .make_dictionary import make_dictionary
+from .get_content import get_content
+from .get_values_conf import UFER_KEYS,UFER_TYPE
 
 def get_values(content):
     types_dict=make_dictionary(UFER_KEYS,UFER_TYPE)

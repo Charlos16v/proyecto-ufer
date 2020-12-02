@@ -1,7 +1,7 @@
 # EN FUNCIONAMIENTO
-from services.src.repair_link import repair_link
-from services.src.get_content import get_content
-from services.src.get_values_conf import UFER_KEYS
+from .repair_link import repair_link
+from .get_content import get_content
+from .get_values_conf import UFER_KEYS
 
 # get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
 
