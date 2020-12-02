@@ -16,7 +16,7 @@ def get_next_target(page):
 
 
 # union se encarga de insertar el contenido de la lista "q" que no se encuentra en "p".
-
+# refactor
 def union(p,q):
     for e in q:
         if e not in p:

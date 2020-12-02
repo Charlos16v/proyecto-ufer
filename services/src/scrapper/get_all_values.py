@@ -15,6 +15,3 @@ def get_all_data(url,depth):
     get_values_on_links(crawl_web(url,depth))
 
 
-get_all_data(UFER_DOMAIN,UFER_DEPTH)
-
-
