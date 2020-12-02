@@ -5,6 +5,6 @@ def is_empty_list(array):
         elif e == "":
             return True
 
-if __name__ == '__main__':
-    assert is_empty_list(["",["",""]]) == True
-    assert is_empty_list(["test",["",""]]) == False
+#if __name__ == '__main__':
+#    assert is_empty_list(["",["",""]]) == True
+#    assert is_empty_list(["test",["",""]]) == False
