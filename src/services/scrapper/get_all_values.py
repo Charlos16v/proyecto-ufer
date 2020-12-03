@@ -1,6 +1,6 @@
 from src.services.scrapper.scrapp import scrapp
 from src.services.crawler.get_content import get_content
-from src.services.config.ufer_conf import UFER_DEPTH, UFER_DOMAIN, UFER_KEYS
+from src.services.config.ufer_conf import UFER_KEYS
 from src.services.scrapper.make_dictionary import make_dictionary
 from src.repository.to_mongo import to_mongo
 from src.services.crawler.web_crawler import crawl_web
