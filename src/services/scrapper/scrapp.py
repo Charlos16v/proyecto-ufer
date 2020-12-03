@@ -2,7 +2,7 @@ from .make_dictionary import make_dictionary
 from .int_detector import int_detector
 from .string_to_list import string_to_list
 from .make_dictionary import make_dictionary
-from services.src.config.ufer_conf import UFER_KEYS,UFER_TYPE
+from src.services.config.ufer_conf import UFER_KEYS,UFER_TYPE
 
 def scrapp(content):
     types_dict=make_dictionary(UFER_KEYS,UFER_TYPE)

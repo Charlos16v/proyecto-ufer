@@ -1,7 +1,7 @@
 # EN FUNCIONAMIENTO
-from .repair_link import repair_link
-from .get_content import get_content
-from services.src.config.ufer_conf import UFER_KEYS
+from src.services.crawler.repair_link import repair_link
+from src.services.crawler.get_content import get_content
+from src.services.config.ufer_conf import UFER_KEYS
 
 # get_next_target recorre el contenido HTML en busca de enlaces "<a href=" y devuelve enlaces y su posicion final.
 
