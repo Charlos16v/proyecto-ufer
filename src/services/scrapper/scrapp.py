@@ -18,6 +18,3 @@ def scrapp(content):
             end_pos=content.find("</ul",start_pos+1)
             ufer_values.append(string_to_list(content[start_pos+1:end_pos]))
     return ufer_values
-
-
-
