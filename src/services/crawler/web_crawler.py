@@ -64,8 +64,3 @@ def crawl_web(seed,max_depth):
             depth += 1
     return crawled
 
-
-print(crawl_web("https://charlos16v.github.io/proyecto-ufer/",3))
-
-
-

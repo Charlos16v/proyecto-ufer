@@ -1,7 +1,6 @@
-from .make_dictionary import make_dictionary
-from .int_detector import int_detector
-from .string_to_list import string_to_list
-from .make_dictionary import make_dictionary
+from src.services.scrapper.make_dictionary import make_dictionary
+from src.services.scrapper.int_detector import int_detector
+from src.services.scrapper.string_to_list import string_to_list
 from src.services.config.ufer_conf import UFER_KEYS,UFER_TYPE
 
 def scrapp(content):
