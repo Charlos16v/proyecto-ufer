@@ -57,7 +57,7 @@ def crawl_web(seed,max_depth):
             union(next_depth, get_all_links(get_content(page)))
             if is_for_scrapp(page) == True:
                 crawled.append(page)
-        if not tocrawl:
+        elif not tocrawl:
             tocrawl, next_depth = next_depth, []
             depth += 1
     return crawled
