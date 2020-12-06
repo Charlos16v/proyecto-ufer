@@ -74,6 +74,10 @@ nav a {
   transition: 0.5s;
 }
 
+.logo a h5 span.gold {
+  color: var(--gold);
+}
+
 .logo a h5:hover span {
   color: var(--white);
 }
