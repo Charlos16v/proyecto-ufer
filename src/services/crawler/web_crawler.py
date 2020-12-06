@@ -55,7 +55,9 @@ def crawl_web(seed,max_depth):
         page = tocrawl.pop()
         if page not in crawled:
             union(next_depth, get_all_links(get_content(page)))
-            if is_for_scrapp(page) == True:
+            if is_for_scrapp(page) == False:
+                continue
+            elif is_for_scrapp(page) == True:
                 crawled.append(page)
         elif not tocrawl:
             tocrawl, next_depth = next_depth, []
@@ -63,7 +65,7 @@ def crawl_web(seed,max_depth):
     return crawled
 
 
-
+print(crawl_web("https://charlos16v.github.io/proyecto-ufer/",3))
 
 
 
