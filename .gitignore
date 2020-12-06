@@ -1,0 +1,9 @@
+  
+.vscode/
+src/
+test/
+.gitignore
+requirements.txt
+main.py
+.gitattributes
+.DS_Store
