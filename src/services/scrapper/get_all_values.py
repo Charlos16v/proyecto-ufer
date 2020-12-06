@@ -7,7 +7,8 @@ from src.services.crawler.web_crawler import crawl_web
 
 def get_values_on_links(links):
     for url in links:
-        to_mongo(make_dictionary(UFER_KEYS,scrapp(get_content(url))))
+        print(make_dictionary(UFER_KEYS,scrapp(get_content(url))))
+
 
 
 # get_values_on_links(crawl_web(UFER_DOMAIN,UFER_DEPTH))

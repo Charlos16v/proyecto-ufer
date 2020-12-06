@@ -4,7 +4,7 @@
 UFER_DOMAIN = "https://charlos16v.github.io/proyecto-ufer/"
 
 # En "UFER_DEPTH" se define la profundidad de la recursividad de búsqueda de links.
-UFER_DEPTH = 5
+UFER_DEPTH = 3
 
 # En "UFER_KEYS" se define el respectivo identificador del contenido a scrappear.
 UFER_KEYS = ['name', 'description', 'driver', 'passengers', 'privacy', 'seats', 'propulsion', 'top_speed', 'price', 'amenities']

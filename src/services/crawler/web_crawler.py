@@ -43,6 +43,8 @@ def is_for_scrapp(link):
     for key in UFER_KEYS:
         if get_content(link).find('id="' + str(key)+'">') == -1:
             return False
+        else:
+            continue
     return True
 
 
@@ -53,11 +55,11 @@ def crawl_web(seed,max_depth):
     depth = 0
     while tocrawl and depth <= max_depth:
         page = tocrawl.pop()
-        if page not in crawled:
+        if page not in crawled: #and is_for_scrapp(page) == True
             union(next_depth, get_all_links(get_content(page)))
             if is_for_scrapp(page) == True:
                 crawled.append(page)
-        elif not tocrawl:
+        if not tocrawl:
             tocrawl, next_depth = next_depth, []
             depth += 1
     return crawled
