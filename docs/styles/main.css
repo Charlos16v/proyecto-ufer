@@ -25,6 +25,7 @@
 body {
   background-color: var(--gray);
   color: var(--white);
+  overflow-x: hidden;
 }
 
 main {
@@ -519,7 +520,6 @@ footer.gold {
     border-bottom: 8px solid var(--white);
   }
   .nav-links {
-    overflow: hidden;
     position: absolute;
     right: 0px;
     height: 92vh;
