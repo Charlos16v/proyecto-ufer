@@ -6,7 +6,7 @@
   --gray: #212121;
   --dark-gray: #171717;
   --purple: #8c52b5;
-  --dark-purple: #1b0f24;
+  --dark-purple: #0e0812;
   --light-purple: #e9dcff;
   --gold: #d7b922;
 
@@ -115,7 +115,7 @@ h2.title {
 }
 
 h2.title span {
-  color: rgb(140, 82, 181);
+  color: var(--purple);
   border-bottom: 13px solid#fff;
 }
 
@@ -157,14 +157,14 @@ section.services p.all {
 }
 
 section.services p.all a {
-  color: rgb(140, 82, 181);
+  color: var(--purple);
   text-decoration: none;
   transition: 0.3s;
   border-radius: 15px;
 }
 
 section.services p.all a:hover {
-  background: rgb(140, 82, 181);
+  background: var(--purple);
   color: #f5f5f5;
   padding: 10px;
 }
@@ -182,7 +182,7 @@ section.services p.all a:hover {
   width: 300px;
   margin: 20px;
   padding: 10px 40px;
-  background: rgb(140, 82, 181);
+  background: var(--purple);
   border: 3px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   display: flex;
@@ -198,7 +198,7 @@ section.services p.all a:hover {
 
 .services .container .product a.button {
   text-decoration: none;
-  color: rgb(140, 82, 181);
+  color: var(--purple);
   background: #fff;
   border: 3px solid rgba(255, 255, 255, 0);
   padding: 15px;
@@ -211,7 +211,7 @@ section.services p.all a:hover {
 .services .container .product a:hover.button {
   border: 3px solid rgba(255, 255, 255, 1);
   color: #fff;
-  background: rgb(140, 82, 181);
+  background: var(--purple);
 }
 
 .product h3 {
@@ -228,7 +228,7 @@ section.services p.all a:hover {
   width: 300px;
   margin: 20px;
   padding: 10px 40px;
-  background: rgb(0, 0, 0);
+  background: var(--dark-purple);
   border: 3px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   display: flex;
@@ -239,12 +239,12 @@ section.services p.all a:hover {
 }
 
 .services .container .gold:hover {
-  border: 3px solid rgba(215, 185, 34, 1);
+  border: 3px solid var(--gold);
 }
 
 .services .container .gold a.button {
   text-decoration: none;
-  color: rgb(215, 185, 34);
+  color: var(--gold);
   background: #fff;
   border: 3px solid rgba(255, 255, 255, 0);
   padding: 15px;
@@ -257,12 +257,12 @@ section.services p.all a:hover {
 .services .container .gold a:hover.button {
   border: 3px solid rgba(255, 255, 255, 1);
   color: #fff;
-  background: rgb(215, 185, 34);
+  background: var(--gold);
 }
 
 .gold h3 {
   font-size: 28px;
-  color: rgb(215, 185, 34);
+  color: var(--gold);
 }
 
 .product img {
@@ -297,7 +297,7 @@ h3#name {
 }
 
 h3#name.gold {
-  color: #d7b922;
+  color: var(--gold);
 }
 
 h4#description {
@@ -362,7 +362,7 @@ h4#description {
 }
 
 .product-features.gold ul li {
-  background-color: rgba(215, 185, 34, 0.8);
+  background-color: rgba(var(--gold), 0.8);
   border: 2px solid var(--gold);
 }
 
@@ -400,7 +400,7 @@ h4#description {
 }
 
 .about .container p span {
-  color: rgb(140, 82, 181);
+  color: var(--purple);
 }
 
 .about .container.pair {
@@ -413,7 +413,7 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 20px;
-  background: rgb(140, 82, 181);
+  background: var(--purple);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -436,7 +436,7 @@ footer p {
 }
 
 footer.gold {
-  background: rgb(215, 185, 34);
+  background: var(--gold);
 }
 
 /* RESPONSIVE */
