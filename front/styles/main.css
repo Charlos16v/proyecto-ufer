@@ -245,8 +245,8 @@ section.services p.all a:hover {
 .services .container .gold a.button {
   text-decoration: none;
   color: var(--gold);
-  background: #fff;
-  border: 3px solid rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid var(--gold);
   padding: 15px;
   border-radius: 15px;
   margin: 30px auto;
@@ -255,8 +255,6 @@ section.services p.all a:hover {
 }
 
 .services .container .gold a:hover.button {
-  border: 3px solid rgba(255, 255, 255, 1);
-  color: #fff;
   background: var(--gold);
 }
 
@@ -322,7 +320,8 @@ h4#description {
 }
 
 .product-features {
-  width: 45%;
+  width: 40%;
+  margin-left: 20px;
 }
 
 .product-features p {
@@ -351,7 +350,6 @@ h4#description {
 
 .product-features ul li {
   color: var(--white);
-  background-color: var(--purple);
   padding: 10px;
   margin: 10px;
   border-radius: 5px;
@@ -362,18 +360,7 @@ h4#description {
 }
 
 .product-features.gold ul li {
-  background-color: rgba(var(--gold), 0.8);
   border: 2px solid var(--gold);
-}
-
-.product-features ul li:hover {
-  border: 2px solid var(--purple);
-  background-color: rgba(var(--white), 0);
-}
-
-.product-features.gold ul li:hover {
-  border: 2px solid var(--gold);
-  background-color: rgba(var(--white), 0);
 }
 
 /* About us */
