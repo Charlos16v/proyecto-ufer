@@ -419,6 +419,7 @@ footer {
   padding: 20px;
   background: var(--purple);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -602,5 +603,22 @@ footer.gold {
   }
   .feature p {
     line-height: 32px;
+  }
+
+  footer p {
+    width: 100%;
+  }
+  footer section.social {
+    width: 100%;
+    margin: 50px auto;
+    text-align: center;
+  }
+  footer section.download {
+    width: 40%;
+    margin: 0 auto;
+  }
+  footer section.download img {
+    margin: auto;
+    width: 100%;
   }
 }
