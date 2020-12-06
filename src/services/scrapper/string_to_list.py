@@ -1,5 +1,5 @@
 # REVISAR
-# Convierte el contenido de los elementos de una lista en un array.
+# Convierte el contenido de los elementos de una lista HTML en un array.
 def string_to_list(string):
     list = string.split('</li>')
     list.pop()
