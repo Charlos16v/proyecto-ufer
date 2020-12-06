@@ -505,13 +505,14 @@ footer.gold {
 }
 
 @media (max-width: 768px) {
+  body {
+    max-width: 95%;
+  }
+
   main {
     width: 100%;
   }
 
-  body {
-    overflow-x: hidden;
-  }
   h2.title {
     font-size: 52px;
   }
