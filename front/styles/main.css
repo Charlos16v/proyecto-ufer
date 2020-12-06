@@ -4,6 +4,7 @@
   /* Colors */
   --white: #f5f5f5;
   --gray: #212121;
+  --dark-gray: #171717;
   --purple: #8c52b5;
   --dark-purple: #1b0f24;
   --light-purple: #e9dcff;
@@ -109,13 +110,12 @@ nav a {
 
 h2.title {
   text-align: center;
-  font-size: 73px;
+  font-size: 72px;
   margin-bottom: 100px;
 }
 
 h2.title span {
   color: rgb(140, 82, 181);
-  font-size: 84px;
   border-bottom: 13px solid#fff;
 }
 
@@ -139,6 +139,7 @@ section.security .container {
 section.security .container .feature {
   width: 30%;
   line-height: 24px;
+  margin: 40px 0;
 }
 
 section.security .container .feature h4 {
@@ -218,8 +219,9 @@ section.services p.all a:hover {
 }
 
 .product p {
-  line-height: 24px;
-  text-align: justify;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
 }
 
 .services .container .gold {
@@ -272,53 +274,106 @@ section.services p.all a:hover {
 
 /* Página de producto */
 
-section.product {
-  margin: auto;
+.product-page {
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--dark-gray);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.product-title {
+  text-align: center;
+  width: 100%;
+}
+
+h3#name {
+  font-size: 36px;
+  font-family: "Poppins";
+  letter-spacing: 5px;
+}
+h3#name {
+  color: var(--purple);
+}
+
+h3#name.gold {
+  color: #d7b922;
+}
+
+h4#description {
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+
+.product-content {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-section.product img {
-  width: 60%;
+.product-logo {
+  width: 55%;
 }
 
-section.product .content {
-  background: rgb(140, 82, 181);
-  width: 30%;
-  padding: 60px;
-  border-radius: 10px;
+.product-logo img {
+  width: 100%;
 }
 
-section.product .content h3 {
-  display: inline;
-  font-size: 26px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #fff;
+.product-features {
+  width: 45%;
 }
 
-section.product .content h4 {
-  margin: 50px 0;
-  text-align: center;
-  line-height: 30px;
+.product-features p {
+  font-size: 24px;
+  letter-spacing: 3px;
 }
 
-section.product .content h5 {
-  font-size: 28px;
+.product-features p span {
+  color: var(--purple);
 }
 
-section.product .content p,
-section.product .content li {
-  font-size: 18px;
+.product-features.gold p span {
+  color: var(--gold);
 }
 
-section.gold .content {
-  background: #000;
+.product-features h5 {
+  display: none;
 }
 
-section.gold .content h3 {
-  color: rgb(215, 185, 34);
-  border-bottom: 3px solid rgb(215, 185, 34);
+.product-features ul#amenities {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.product-features ul li {
+  color: var(--white);
+  background-color: var(--purple);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  border: 2px solid var(--purple);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-features.gold ul li {
+  background-color: rgba(215, 185, 34, 0.8);
+  border: 2px solid var(--gold);
+}
+
+.product-features ul li:hover {
+  border: 2px solid var(--purple);
+  background-color: rgba(var(--white), 0);
+}
+
+.product-features.gold ul li:hover {
+  border: 2px solid var(--gold);
+  background-color: rgba(var(--white), 0);
 }
 
 /* About us */
@@ -386,11 +441,13 @@ footer.gold {
 
 /* RESPONSIVE */
 
-/* Header */
-
 @media (max-width: 1680px) {
   .nav-links {
     width: 30%;
+  }
+
+  .product-page {
+    width: 90%;
   }
 }
 
@@ -398,11 +455,32 @@ footer.gold {
   .nav-links {
     width: 50%;
   }
+
+  .product-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-features {
+    width: 100%;
+  }
+
+  .product-features ul#amenities {
+    width: 100%;
+    overflow: visible;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+  h2.title {
+    font-size: 52px;
   }
   .nav-links {
     position: absolute;
@@ -422,6 +500,19 @@ footer.gold {
   .burger {
     display: block;
     cursor: pointer;
+  }
+
+  .product-page {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .services .container .product {
+    width: 400px;
+  }
+
+  .services .container .product img {
+    width: 300px;
   }
 }
 
