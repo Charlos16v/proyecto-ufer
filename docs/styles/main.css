@@ -472,7 +472,6 @@ footer.gold {
 
   .product-features ul#amenities {
     width: 100%;
-    overflow: visible;
     justify-content: center;
     width: 80%;
     margin: auto;
@@ -520,6 +519,7 @@ footer.gold {
     border-bottom: 8px solid var(--white);
   }
   .nav-links {
+    overflow: hidden;
     position: absolute;
     right: 0px;
     height: 92vh;
