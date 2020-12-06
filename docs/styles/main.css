@@ -506,11 +506,11 @@ footer.gold {
 
 @media (max-width: 768px) {
   body {
-    max-width: 95%;
+    overflow-x: hidden;
   }
 
   main {
-    width: 100%;
+    max-width: 95%;
   }
 
   h2.title {
@@ -520,6 +520,7 @@ footer.gold {
     border-bottom: 8px solid var(--white);
   }
   .nav-links {
+    overflow-x: hidden;
     position: absolute;
     right: 0px;
     height: 92vh;
