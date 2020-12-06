@@ -482,6 +482,9 @@ footer.gold {
   h2.title {
     font-size: 52px;
   }
+  h2.title span {
+    border-bottom: 8px solid var(--white);
+  }
   .nav-links {
     position: absolute;
     right: 0px;
