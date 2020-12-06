@@ -1,13 +1,3 @@
-<<<<<<< HEAD
 .vscode/
-=======
-  
-.vscode/
-src/
-test/
-.gitignore
-requirements.txt
-main.py
->>>>>>> gh-pages
 .gitattributes
 .DS_Store
