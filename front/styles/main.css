@@ -4,8 +4,9 @@
   /* Colors */
   --white: #f5f5f5;
   --gray: #212121;
+  --dark-gray: #171717;
   --purple: #8c52b5;
-  --dark-purple: #1b0f24;
+  --dark-purple: #0e0812;
   --light-purple: #e9dcff;
   --gold: #d7b922;
 
@@ -61,7 +62,20 @@ nav a {
   text-transform: uppercase;
   padding: 5px;
   letter-spacing: 15px;
+}
+
+.logo h5 {
   font-size: 24px;
+}
+
+.logo a h5 span {
+  font-size: 25px;
+  color: var(--purple);
+  transition: 0.5s;
+}
+
+.logo a h5:hover span {
+  color: var(--white);
 }
 
 .logo a:hover {
@@ -109,13 +123,12 @@ nav a {
 
 h2.title {
   text-align: center;
-  font-size: 73px;
+  font-size: 72px;
   margin-bottom: 100px;
 }
 
 h2.title span {
-  color: rgb(140, 82, 181);
-  font-size: 84px;
+  color: var(--purple);
   border-bottom: 13px solid#fff;
 }
 
@@ -139,6 +152,7 @@ section.security .container {
 section.security .container .feature {
   width: 30%;
   line-height: 24px;
+  margin: 40px 0;
 }
 
 section.security .container .feature h4 {
@@ -156,14 +170,14 @@ section.services p.all {
 }
 
 section.services p.all a {
-  color: rgb(140, 82, 181);
+  color: var(--purple);
   text-decoration: none;
   transition: 0.3s;
   border-radius: 15px;
 }
 
 section.services p.all a:hover {
-  background: rgb(140, 82, 181);
+  background: var(--purple);
   color: #f5f5f5;
   padding: 10px;
 }
@@ -181,7 +195,7 @@ section.services p.all a:hover {
   width: 300px;
   margin: 20px;
   padding: 10px 40px;
-  background: rgb(140, 82, 181);
+  background: var(--purple);
   border: 3px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   display: flex;
@@ -197,7 +211,7 @@ section.services p.all a:hover {
 
 .services .container .product a.button {
   text-decoration: none;
-  color: rgb(140, 82, 181);
+  color: var(--purple);
   background: #fff;
   border: 3px solid rgba(255, 255, 255, 0);
   padding: 15px;
@@ -210,7 +224,7 @@ section.services p.all a:hover {
 .services .container .product a:hover.button {
   border: 3px solid rgba(255, 255, 255, 1);
   color: #fff;
-  background: rgb(140, 82, 181);
+  background: var(--purple);
 }
 
 .product h3 {
@@ -218,15 +232,16 @@ section.services p.all a:hover {
 }
 
 .product p {
-  line-height: 24px;
-  text-align: justify;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
 }
 
 .services .container .gold {
   width: 300px;
   margin: 20px;
   padding: 10px 40px;
-  background: rgb(0, 0, 0);
+  background: var(--dark-purple);
   border: 3px solid rgba(255, 255, 255, 0);
   border-radius: 10px;
   display: flex;
@@ -237,14 +252,14 @@ section.services p.all a:hover {
 }
 
 .services .container .gold:hover {
-  border: 3px solid rgba(215, 185, 34, 1);
+  border: 3px solid var(--gold);
 }
 
 .services .container .gold a.button {
   text-decoration: none;
-  color: rgb(215, 185, 34);
-  background: #fff;
-  border: 3px solid rgba(255, 255, 255, 0);
+  color: var(--gold);
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid var(--gold);
   padding: 15px;
   border-radius: 15px;
   margin: 30px auto;
@@ -253,14 +268,12 @@ section.services p.all a:hover {
 }
 
 .services .container .gold a:hover.button {
-  border: 3px solid rgba(255, 255, 255, 1);
-  color: #fff;
-  background: rgb(215, 185, 34);
+  background: var(--gold);
 }
 
 .gold h3 {
   font-size: 28px;
-  color: rgb(215, 185, 34);
+  color: var(--gold);
 }
 
 .product img {
@@ -272,53 +285,95 @@ section.services p.all a:hover {
 
 /* Página de producto */
 
-section.product {
-  margin: auto;
+.product-page {
+  width: 80%;
+  margin: 0 auto;
+  background-color: var(--dark-gray);
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.product-title {
+  text-align: center;
+  width: 100%;
+}
+
+h3#name {
+  font-size: 36px;
+  font-family: "Poppins";
+  letter-spacing: 5px;
+}
+h3#name {
+  color: var(--purple);
+}
+
+h3#name.gold {
+  color: var(--gold);
+}
+
+h4#description {
+  font-size: 28px;
+  font-weight: 200;
+  letter-spacing: 3px;
+}
+
+.product-content {
   display: flex;
   justify-content: space-between;
-  padding: 40px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-section.product img {
-  width: 60%;
+.product-logo {
+  width: 55%;
 }
 
-section.product .content {
-  background: rgb(140, 82, 181);
-  width: 30%;
-  padding: 60px;
-  border-radius: 10px;
+.product-logo img {
+  width: 100%;
 }
 
-section.product .content h3 {
-  display: inline;
-  font-size: 26px;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #fff;
+.product-features {
+  width: 40%;
+  margin-left: 20px;
 }
 
-section.product .content h4 {
-  margin: 50px 0;
-  text-align: center;
-  line-height: 30px;
+.product-features p {
+  font-size: 24px;
+  letter-spacing: 3px;
 }
 
-section.product .content h5 {
-  font-size: 28px;
+.product-features p span {
+  color: var(--purple);
 }
 
-section.product .content p,
-section.product .content li {
-  font-size: 18px;
+.product-features.gold p span {
+  color: var(--gold);
 }
 
-section.gold .content {
-  background: #000;
+.product-features h5 {
+  display: none;
 }
 
-section.gold .content h3 {
-  color: rgb(215, 185, 34);
-  border-bottom: 3px solid rgb(215, 185, 34);
+.product-features ul#amenities {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.product-features ul li {
+  color: var(--white);
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  border: 2px solid var(--purple);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.product-features.gold ul li {
+  border: 2px solid var(--gold);
 }
 
 /* About us */
@@ -345,7 +400,7 @@ section.gold .content h3 {
 }
 
 .about .container p span {
-  color: rgb(140, 82, 181);
+  color: var(--purple);
 }
 
 .about .container.pair {
@@ -358,7 +413,7 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 20px;
-  background: rgb(140, 82, 181);
+  background: var(--purple);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -381,16 +436,18 @@ footer p {
 }
 
 footer.gold {
-  background: rgb(215, 185, 34);
+  background: var(--gold);
 }
 
 /* RESPONSIVE */
 
-/* Header */
-
 @media (max-width: 1680px) {
   .nav-links {
     width: 30%;
+  }
+
+  .product-page {
+    width: 90%;
   }
 }
 
@@ -398,11 +455,35 @@ footer.gold {
   .nav-links {
     width: 50%;
   }
+
+  .product-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-features {
+    width: 100%;
+  }
+
+  .product-features ul#amenities {
+    width: 100%;
+    overflow: visible;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+  }
 }
 
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+  }
+  h2.title {
+    font-size: 52px;
+  }
+  h2.title span {
+    border-bottom: 8px solid var(--white);
   }
   .nav-links {
     position: absolute;
@@ -422,6 +503,19 @@ footer.gold {
   .burger {
     display: block;
     cursor: pointer;
+  }
+
+  .product-page {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .services .container .product {
+    width: 400px;
+  }
+
+  .services .container .product img {
+    width: 300px;
   }
 }
 
