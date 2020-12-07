@@ -14,7 +14,6 @@ def get_next_target(page):
     end_quote = page.find('"', start_quote + 1)
     url = page[start_quote + 1:end_quote]
     return url, end_quote
-print(get_next_target("<a href=''"))
 
 # union se encarga de insertar el contenido de la lista "q" que no se encuentra en "p".
 # refactor
