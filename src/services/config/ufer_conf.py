@@ -8,6 +8,8 @@ UFER_DEPTH = 3
 
 # En "UFER_KEYS" se define el respectivo identificador del contenido a scrappear.
 UFER_KEYS = ['name', 'description', 'driver', 'passengers', 'privacy', 'seats', 'propulsion', 'top_speed', 'price', 'amenities']
+#UFER_KEYS = ['name', 'description', 'price']
 
 # En "UFER_TYPE" se define el respectivo type del contenido a scrappear.
 UFER_TYPE = [str, str, str, int, str, str, str, int, int, list]
+#UFER_TYPE = [str, str, int ]
