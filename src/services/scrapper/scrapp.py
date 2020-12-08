@@ -3,6 +3,7 @@ from src.services.scrapper.make_dictionary import make_dictionary
 from src.services.scrapper.int_detector import int_detector
 from src.services.scrapper.string_to_list import string_to_list
 from src.services.config.ufer_conf import UFER_DEPTH, UFER_DOMAIN, UFER_KEYS,UFER_TYPE
+from src.services.crawler.get_content import get_content
 
 def scrapp(content):
     types_dict=make_dictionary(UFER_KEYS,UFER_TYPE)
