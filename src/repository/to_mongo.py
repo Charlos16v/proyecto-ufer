@@ -1,15 +1,17 @@
+from src.services.config.ufer_conf import UFER_URI
 import pymongo
 
-# LIBS== PYMONGO, DNSPYTHON
+
 def to_mongo(dic):
     try:
-        uri = "mongodb+srv://charlos:Ufer69@cluster0.35hqi.mongodb.net/Ufer?retryWrites=true&w=majority"
-        client = pymongo.MongoClient(uri)
+        client = pymongo.MongoClient(UFER_URI)
+    except (AttributeError, pymongo.errors.OperationFailure):
+        print("Impossible connect to the DataBase")
+    else:
         db = client.Ufer
         collection = db.ufer_services
-        collection.insert_one(dic)  # else añadir upsert true
-    except Exception:
-        print("Impossible connect to the DataBase")
+        collection.insert_one(dic)
+        print("Inserting document")
+    finally:
+        print("...")
 
-
-# finally: terminar conex bbdd
