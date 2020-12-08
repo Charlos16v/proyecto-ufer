@@ -1,5 +1,7 @@
 /* CONSTANTES */
 
+/*He utilizado constantes para guardar los colores principales de la página*/
+
 :root {
   /* Colors */
   --white: #f5f5f5;
@@ -10,6 +12,8 @@
   --light-purple: #e9dcff;
   --gold: #d7b922;
 
+  /*Igualmente con las fuentes*/
+
   /* Fonts */
   --jetbrains: "JetBrains Mono", monospace;
   --roboto: "Roboto", sans-serif;
@@ -17,6 +21,9 @@
 }
 
 /* Generales */
+
+/*border-box indica que el alto o ancho definido de cualquier elemento tendrá en cuenta cualquier borde o margen*/
+
 * {
   box-sizing: border-box;
   font-family: var(--roboto);
@@ -26,6 +33,8 @@ body {
   background-color: var(--gray);
   color: var(--white);
 }
+
+/*Aplico un ancho del 80% al contenido principal y luego lo centro. Para dejar márgenes a ambos lados*/
 
 main {
   width: 80%;
@@ -43,15 +52,17 @@ li {
 
 /* Header */
 
+/*A el elemento contenedor (nav) le aplico display: flex y un justify-content: space-around para que los items se coloquen dejando un espacio equivalente entre ellos. La barra de navegación tendrá un alto mínimo de 8vh, vh es una unidad relativa de acuerdo al viewport. (8% del alto del viewport) */
+
 nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* Unidades relativas de acuerdo al viewport. (8% del alto del viewport) */
   min-height: 8vh;
   color: var(--white);
 }
 
+/*Los enlaces que sufran cambios (con hover) tendrán una trancisión de .5s*/
 nav a {
   font-family: var(--poppins);
   font-weight: 700;
@@ -99,7 +110,7 @@ nav a {
 .nav-links a {
   letter-spacing: 2px;
   padding-bottom: 3px;
-  border-bottom: 3px solid rgba(140, 82, 181, 0);
+  border-bottom: 3px solid rgba(255, 255, 255, 0);
   transition: 0.3s;
 }
 
@@ -111,6 +122,7 @@ nav a {
   border-bottom: 3px solid var(--gold);
 }
 
+/*El botón que despliega lo ocultaremos de momento */
 .burger {
   display: none;
 }
@@ -133,7 +145,7 @@ h2.title {
 
 h2.title span {
   color: var(--purple);
-  border-bottom: 13px solid#fff;
+  border-bottom: 13px solid var(--white);
 }
 
 section.landing {
@@ -188,6 +200,7 @@ section.services p.all a:hover {
 
 /* Services */
 
+/*flex-wrap indica que si los elementos no caben en una sola línea, pasarán a ocupar más de una*/
 .services .container {
   display: flex;
   flex-wrap: wrap;
@@ -195,6 +208,7 @@ section.services p.all a:hover {
   margin: auto;
 }
 
+/*Con flex-direction indicamos si los items se colocarán en columnas o un filas, align-items centra los elementos verticalmente*/
 .services .container .product {
   width: 300px;
   margin: 20px;
@@ -304,7 +318,7 @@ section.services p.all a:hover {
 
 h3#name {
   font-size: 36px;
-  font-family: "Poppins";
+  font-family: var(--poppins);
   letter-spacing: 5px;
 }
 h3#name {
@@ -407,6 +421,7 @@ h4#description {
   color: var(--purple);
 }
 
+/*Aquí indicamos que la firección de las filas sea inversa*/
 .about .container.pair {
   flex-direction: row-reverse;
 }
@@ -445,6 +460,8 @@ footer.gold {
 }
 
 /* RESPONSIVE */
+
+/*Aquí indicamos los estilos que se aplicarán cuando se cumpla el ancho de pantalla indicado*/
 
 @media (max-width: 1680px) {
   .nav-links {
@@ -504,7 +521,7 @@ footer.gold {
     font-size: 22px;
   }
 }
-
+/*Para tamaños de pantalla de una tablet */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
@@ -520,6 +537,7 @@ footer.gold {
   h2.title span {
     border-bottom: 8px solid var(--white);
   }
+  /*Aquí cambiamos por completo el comportamiento de los links de navegación para que se muestren en forma de menú desplegable, predeterminadamente no será visible, está oculto a la derecha de la página*/
   .nav-links {
     overflow-x: hidden;
     position: absolute;
@@ -555,10 +573,12 @@ footer.gold {
   }
 }
 
+/*Con JavaScript conseguimos que al hacer click en el botón, el menú que estaba oculto a la derecha se translade a la izquierda para hacerlo visible*/
 .nav-active {
   transform: translateX(0%);
 }
 
+/*Con JavaScript también transformamos los elementos que componen el botón para que pase de un "burger" a una cruz con una trancisión*/
 .toggle .line1 {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -571,6 +591,7 @@ footer.gold {
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
+/*Para tamaños de pantalla de dispositivos móviles.*/
 @media (max-width: 450px) {
   main {
     width: 95%;
