@@ -87,6 +87,48 @@ En la página de producto tenemos una sección product-page que contiene un el d
 
 Consideramos que actualmente es indispensable que cualquier página web sea mínimamente responsive, y que debe visualizarse correctamente sin importar el dispositivo utilizado. Para esto utilizamos los @media, indicando a partir de que cierta anchura han de modificarse los estilos. En nuestra página hemos tratado de conseguir que la visualización sea correcta a cualquier anchura.
 
+## Config
+
+Disponemos del módulo de configuración de la herramienta y disponemos de cuatro apartados a configurar.
+
+En el primer apartado **DOMAIN** aportamos el url del dominio de la página de la que queremos scrapear contenido.
+
+En el segundo apartado **DEPTH** se indica la recursividad máxima de la profundidad del sitio web a la que se quiere acceder.
+
+En el tercer apartado **KEYS** indicamos las palabras clave a la hora de encontrar el identificador del contenido a scrapear.
+
+En el cuarto apartado **TYPE** aportamos como queremos tratar los datos de los identificadores indicados anteriormente.
+
+## Crawler
+
+Una vez el módulo **CONFIG** haya quedado con el contenido especificado, el módulo **CRAWLER** tomará esos valores como configuración para extraer las páginas a scrapear
+
+Comenzando por extraer el contenido de una página web, procederemos a hacer un request al **DOMAIN** especificado anteriormente con la función **get_content**, utilizando la librería **requests** necesaria para el funcionamiento de la herramienta. Request mediante el protocolo HTTP nos devolverá un “Response” con el contenido en formato “string” del código **HTML** de la página web.
+
+Una vez dispongamos del contenido comienza el módulo **web_crawler** a extraer los enlaces que conforman el sitio web del **DOMAIN** especificado, según la **DEPTH** aportada **web_crawler** profundizará más o menos en la búsqueda de enlaces.
+
+El módulo **web_crawler** está compuesto por varias funciones:
+
+- **`get_next_target`**: Se encarga de buscar los enlaces en el contenido HTML (“<a href=”) y una vez localizado devuelve el enlace y su posición final.
+- **`union`**: Es la función encargada de unir 2 listas(p y q), añadiendo el contenido de q que no está en p.
+- **`get_all_links`**: Se encarga mediante la función get_next_target de extraer todos los enlaces de una página completa, recorre el contenido HTML y añade a una lista los enlaces encontrados.
+- **`is_for_scrapp`**: Función encargada de comprobar si en un enlace hay contenido que nos interesa scrapear o no, para ello utiliza los valores aportamos en **KEYS** del módulo **CONF**, devuelve un valor booleano.
+- **`repair_link`**: Función encargada de “reparar” links inválidos(falta de http) ya que en nuestra web los enlaces están indicados con rutas relativas a documentos HTML, **repair_link** añade el dominio indicado en **UFER_DOMAIN** justo delante de la ruta relativa, permitiendo así acceder a ella con un **request**.
+
+## Scrapper
+
+## Repository
+
+Es el módulo que contiene los archivos relacionados con la conexión a la base de datos.
+
+### To Mongo
+
+Es el encargado de hacer la conexión con la base de datos e introducir cada documento en la colección indicada. Cada diccionario obtenido mediante **SCRAPPER** será un documento en la colección.
+
+### Schema Validation
+
+Hemos decidido crear un esquema de validación para nuestra colección. Hemos declarado que lo campos requeridos serán name, description y precio, y que serán tipo string, string y entero, respectivamente.
+
 ## Conclusiones
 
 La idea para nuestro proyecto era bastante ambiciosa teniendo en cuenta nuestras competencias y el tiempo del que disponíamos, aún así, estamos muy orgullosos del resultado. Hemos conseguido hacer una página web bien diseñada bajo nuestro punto de vista, hemos creado una herramienta que recoge todos los enlaces de nuestra página y una que obtiene todos los datos que necesitamos y los introduce en un diccionario. Finalmente, hemos realizado una conexión con MongoDB en la que subimos todos nuestros diccionarios como documentos en una colección.
