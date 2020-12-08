@@ -455,6 +455,14 @@ footer p {
   font-weight: 700;
 }
 
+.social a i {
+  transition: 0.5s;
+}
+
+.social a:hover i {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 footer.gold {
   background: var(--gold);
 }
