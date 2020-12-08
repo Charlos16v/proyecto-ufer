@@ -16,7 +16,7 @@ A continuación, voy a mencionar algunas herramientas y recursos que hemos utili
 
 Cada navegador aplica unos estilos propios por defecto, como por ejemplo, márgenes, tamaños de fuente, etc. La solución rápida que suele utilizarse es añadir algo así:
 
-![margin:0; padding:0;](./images/ma0pa0.png)
+![margin:0; padding:0;](images/ma0pa0.PNG)
 
 Normalize es mucho más potente, regulariza los estilos y hace que nuestra página se vea igual independientemente del navegador donde se visualice.
 La forma de aplicarlo es tan sencilla como descargar un archivo css que pesa apenas 8KB y enlazarlo a nuestro html.
