@@ -16,7 +16,7 @@ A continuación, voy a mencionar algunas herramientas y recursos que hemos utili
 
 Cada navegador aplica unos estilos propios por defecto, como por ejemplo, márgenes, tamaños de fuente, etc. La solución rápida que suele utilizarse es añadir algo así:
 
-![margin:0; padding:0;](images/ma0pa0.png)
+![margin:0; padding:0;](images/ma0pa0.PNG)
 
 Normalize es mucho más potente, regulariza los estilos y hace que nuestra página se vea igual independientemente del navegador donde se visualice.
 La forma de aplicarlo es tan sencilla como descargar un archivo css que pesa apenas 8KB y enlazarlo a nuestro html.
@@ -39,13 +39,13 @@ Vamos a descomponer la página en componentes para explicar el funcionamiento de
 
 #### Header
 
-![Header](images/header.png)
+![Header](images/header.PNG)
 
 La estructura del header es bastante sencilla, un elemento nav que contiene un div con el logo, una lista desordenada con los links al resto de páginas y un “botón” que se mostrará cuando la página se visualice en un dispositivo móvil, reemplazando la lista desordenada, hasta que hagamos click sobre el botón para desplegarla.
 
 #### Footer
 
-![Footer](images/footer.png)
+![Footer](images/footer.PNG)
 
 El footer es muy simple también, un párrafo con un pequeño texto, un section con iconos que son enlaces a las redes sociales y un section con una imagen del típico botón para descargar la aplicación móvil (no funcional).
 
@@ -57,29 +57,29 @@ El apartado main es básicamente el único contenido que cambia según la págin
 
 El index se divide en dos secciones:
 
-![Index Main](images/main_index1.png)
+![Index Main](images/main_index1.PNG)
 
 El “landing”, donde aterrizas cuando entras en la página. Que tiene un mensaje de bienvenida y un contenedor con tres de nuestros servicios más populares, cada uno tiene un botón que es un enlace que te lleva a la página del producto en sí. Abajo del contenedor tiene un pequeño texto con un enlace que nos lleva al resto de productos.
 
-![Index Main](images/main_index2.png)
+![Index Main](images/main_index2.PNG)
 
 Y la sección “security ” tiene algunos cuadros de texto acompañados de un icono, donde hablamos un poco de las medidas de seguridad que tomamos.
 
 ##### Services
 
-![Services Main](images/main_services.png)
+![Services Main](images/main_services.PNG)
 
 En la sección de servicios tenemos un título y un contenedor que contiene un div para cada uno de los productos, cada div tiene forma de tarjeta y contiene el nombre del servicio, una descripción, una imagen y un enlace para ir a su página con el resto de características.
 
 ##### About
 
-![About Main](images/main_about.png)
+![About Main](images/main_about.PNG)
 
 En la página de about us solo tenemos un par de divs que son un texto acompañado de una imagen, además en el texto tenemos varios span, a los que luego cambiamos el estilo para resaltarlos.
 
 ##### Página de producto
 
-![Página de producto](images/main_product.png)
+![Página de producto](images/main_product.PNG)
 
 En la página de producto tenemos una sección product-page que contiene un el div product-title, que contiene el título y descripción del producto. Al mismo nivel tenemos product-content, que contiene la imagen del producto y sus características. Las características están en un elemento p, y la información que queremos scrapear se encuentra en un span para poder encontrarlo mediante su id. Además tenemos una lista de pequeñas características que también queremos scrapear
 
