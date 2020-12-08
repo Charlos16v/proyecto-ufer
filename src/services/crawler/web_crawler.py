@@ -37,7 +37,6 @@ def get_all_links(page):
             break
     return links
 
-
 # TESTEAR CAMBIO
 def is_for_scrapp(link):
     for key in UFER_KEYS:
