@@ -117,6 +117,19 @@ El módulo **web_crawler** está compuesto por varias funciones:
 
 ## Scrapper
 
+El módulo scrapper es el encargado de extraer el contenido de las páginas web obtenidas por el módulo **CRAWLER**.
+
+**Scrapp** es la función principal, comienza creando un diccionario a partir de los valores aportados en **CONFIG**, el diccionario está compuesto por **KEYS** y **TYPE**, este diccionario es usado posteriormente para tratar los valores extraídos de diferentes formas.
+
+El módulo scrapp está compuesto por varias funciones:
+
+* **`scrapp`**: Como anteriormente está explicado esta es la función principal del módulo y esta recorre los valores aportados en **KEYS** de **CONF**, forma un identificador con las keys. 
+Ya que en la web está estructurado el contenido a scrappear con los identificadores antepuestos, el contenido a scrappear está contenido justo después del identificador y antes del cierre “<”.
+* **`int_detector`**: Esta función detecta si el valor extraído es un string o, en caso de todo el contenido ser numérico, considerarlo un íntegro y añadirlo como tal.
+* **`string_to_list`**: Función encargada de extraer el contenido de una lista HTML y convertirla en un array, con los respectivos valores de la lista.
+
+
+
 ## Repository
 
 Es el módulo que contiene los archivos relacionados con la conexión a la base de datos.
@@ -128,6 +141,9 @@ Es el encargado de hacer la conexión con la base de datos e introducir cada doc
 ### Schema Validation
 
 Hemos decidido crear un esquema de validación para nuestra colección. Hemos declarado que lo campos requeridos serán name, description y precio, y que serán tipo string, string y entero, respectivamente.
+
+## Diagrama de componentes
+![Diagrama de componentes Ufer](images/ufer_components.png)
 
 ## Conclusiones
 
