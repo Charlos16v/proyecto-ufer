@@ -142,7 +142,7 @@ Hemos decidido crear un esquema de validación para nuestra colección. Hemos de
 
 ## Diagrama de componentes
 
-![Diagrama de componentes Ufer](images/ufer_components.png)
+![Diagrama de componentes Ufer](images/UFER_components.png)
 
 ## Conclusiones
 
