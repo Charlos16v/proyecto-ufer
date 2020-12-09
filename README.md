@@ -128,6 +128,10 @@ El módulo scrapp está compuesto por varias funciones:
 - **`int_detector`**: Esta función detecta si el valor extraído es un string o, en caso de todo el contenido ser numérico, considerarlo un íntegro y añadirlo como tal.
 - **`string_to_list`**: Función encargada de extraer el contenido de una lista HTML y convertirla en un array, con los respectivos valores de la lista.
 
+* **`make_dictionary`**: Esta función simplemente se encarga de crear un diccionario almacenado en una variable “dict”.
+* **`get_values_on_links`**: Función encargada de recorrer una lista de enlaces, y para cada enlace extraer contenido, crear un diccionario y enviarlo a **MongoDB**
+* **`get_all_data`**: Es la función que hace de unión entre la lista de enlaces extraída por **web_crawler** con la extracción de cada enlaces con **get_values_on_links**.
+
 ## Repository
 
 Es el módulo que contiene los archivos relacionados con la conexión a la base de datos.
@@ -139,6 +143,45 @@ Es el encargado de hacer la conexión con la base de datos e introducir cada doc
 ### Schema Validation
 
 Hemos decidido crear un esquema de validación para nuestra colección. Hemos declarado que lo campos requeridos serán name, description y precio, y que serán tipo string, string y entero, respectivamente.
+
+## Arquitectura y modelo de desarrollo
+
+#### Arquitectura
+
+Consideramos que es una **arquitectura de microservicios**, ya que hemos tratado de dividir nuestra herramienta en módulos funcionales por si mismos.
+También mencionaremos que nuestra página web está alojada en un servicio en la nube.
+
+#### Modelo de desarrollo
+
+El funcionamiento de la aplicación consiste en tomar la salida de un módulo como entrada del siguiente, por lo que también consideramos que se trata de un **modelo de desarrollo en espiral**.
+Consideramos que es un desarrollo en espiral por los siguientes motivos:
+
+- Es una mezcla del **modelo en cascada** y el **modelo basado en prototipos**
+- Nuestra aplicación se ha ido construyendo con versiones iniciales de cada módulo, que después han ido evolucionando.
+
+## Tecnologías y herramientas utilizadas
+
+#### Tecnologías
+
+- MongoDB
+- HTML5 y CSS3
+- JavaScript
+- Git
+- Markdown
+- Python
+  - Requests
+  - Pymongo
+  - Pytest
+
+#### Herramientas
+
+- Visual Studio Code
+- PyCharm
+- GitKraken
+- Clockify
+- Terminal
+- Mongo Compass
+- MacDown
 
 ## Diagrama de componentes
 
