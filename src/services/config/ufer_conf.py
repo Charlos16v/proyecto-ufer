@@ -1,6 +1,9 @@
 # CONFIGURACIÓN PARA EL SCRAPPER DE UFER
 
+
+# En "UFER_URI se declara la conexion al cluster de mongoDB."
 UFER_URI = "mongodb+srv://charlos:Ufer69@cluster0.35hqi.mongodb.net/Ufer?retryWrites=true&w=majority"
+
 
 # En "UFER_DOMAIN" se declara el dominio de la web a scrappear.
 UFER_DOMAIN = "https://charlos16v.github.io/proyecto-ufer/"
