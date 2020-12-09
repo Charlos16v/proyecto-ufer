@@ -216,32 +216,23 @@ El módulo scrapp está compuesto por varias funciones:
 
 Es el módulo que contiene los archivos relacionados con la conexión a la base de datos.
 
-### To Mongo
+#### To Mongo
 
 Es el encargado de hacer la conexión con la base de datos e introducir cada documento en la colección indicada. Cada diccionario obtenido mediante **SCRAPPER** será un documento en la colección.
 
-### Schema Validation
+#### Schema Validation
 
 Hemos decidido crear un esquema de validación para nuestra colección. Hemos declarado que lo campos requeridos serán name, description y precio, y que serán tipo string, string y entero, respectivamente.
 
-## Arquitectura y modelo de desarrollo
 
-#### Arquitectura
+## Descripción técnica
+
+### Arquitectura
 
 Consideramos que es una **arquitectura de microservicios**, ya que hemos tratado de dividir nuestra herramienta en módulos funcionales por si mismos.
 También mencionaremos que nuestra página web está alojada en un servicio en la nube.
 
-#### Modelo de desarrollo
-
-El funcionamiento de la aplicación consiste en tomar la salida de un módulo como entrada del siguiente, por lo que también consideramos que se trata de un **modelo de desarrollo en espiral**.
-Consideramos que es un desarrollo en espiral por los siguientes motivos:
-
-- Es una mezcla del **modelo en cascada** y el **modelo basado en prototipos**
-- Nuestra aplicación se ha ido construyendo con versiones iniciales de cada módulo, que después han ido evolucionando.
-
-## Justificación del tiempo invertido
-
-## Tecnologías y herramientas utilizadas
+### Tecnologías y herramientas utilizadas
 
 #### Tecnologías
 
@@ -265,9 +256,25 @@ Consideramos que es un desarrollo en espiral por los siguientes motivos:
 - Mongo Compass
 - MacDown
 
-## Diagrama de componentes
+### Diagrama de componentes
+![Diagrama de componentes](images/UFER_components.png)
+## Metodología de desarrollo
 
-![Diagrama de componentes Ufer](images/UFER_components.png)
+El funcionamiento de la aplicación consiste en tomar la salida de un módulo como entrada del siguiente, por lo que también consideramos que se trata de un **modelo de desarrollo en espiral**.
+Consideramos que es un desarrollo en espiral por los siguientes motivos:
+
+- Es una mezcla del **modelo en cascada** y el **modelo basado en prototipos**
+- Nuestra aplicación se ha ido construyendo con versiones iniciales de cada módulo, que después han ido evolucionando.
+
+
+## Justificación del tiempo invertido
+Analizando el gráfico de Clockify podemos ver que hemos invertido un tiempo significante en la página web, ya que teníamos claro que no queríamos hacer algo básico y simplemente funcional.
+
+En cuanto la herramienta de scrapping, hemos querido dar importancia a crear una herramienta funcional independientemente, por así decirlo, de la página a scrappear, somos conscientes de que no es una herramienta universal pero hemos pretendido poder abarcar lo máximo posible mediante el fichero de configuración.
+
+Debemos tener en cuenta que no teníamos los conocimientos para hacer muchas de las cosas que pretendíamos y el tiempo invertido en la investigación y la prueba y error se ven reflejados en el gráfico.
+
+![Reporte general](images/general.png)
 
 ## Conclusiones
 
