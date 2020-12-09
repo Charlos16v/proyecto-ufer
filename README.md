@@ -123,12 +123,10 @@ El módulo scrapper es el encargado de extraer el contenido de las páginas web 
 
 El módulo scrapp está compuesto por varias funciones:
 
-* **`scrapp`**: Como anteriormente está explicado esta es la función principal del módulo y esta recorre los valores aportados en **KEYS** de **CONF**, forma un identificador con las keys. 
-Ya que en la web está estructurado el contenido a scrappear con los identificadores antepuestos, el contenido a scrappear está contenido justo después del identificador y antes del cierre “<”.
-* **`int_detector`**: Esta función detecta si el valor extraído es un string o, en caso de todo el contenido ser numérico, considerarlo un íntegro y añadirlo como tal.
-* **`string_to_list`**: Función encargada de extraer el contenido de una lista HTML y convertirla en un array, con los respectivos valores de la lista.
-
-
+- **`scrapp`**: Como anteriormente está explicado esta es la función principal del módulo y esta recorre los valores aportados en **KEYS** de **CONF**, forma un identificador con las keys.
+  Ya que en la web está estructurado el contenido a scrappear con los identificadores antepuestos, el contenido a scrappear está contenido justo después del identificador y antes del cierre “<”.
+- **`int_detector`**: Esta función detecta si el valor extraído es un string o, en caso de todo el contenido ser numérico, considerarlo un íntegro y añadirlo como tal.
+- **`string_to_list`**: Función encargada de extraer el contenido de una lista HTML y convertirla en un array, con los respectivos valores de la lista.
 
 ## Repository
 
@@ -143,7 +141,8 @@ Es el encargado de hacer la conexión con la base de datos e introducir cada doc
 Hemos decidido crear un esquema de validación para nuestra colección. Hemos declarado que lo campos requeridos serán name, description y precio, y que serán tipo string, string y entero, respectivamente.
 
 ## Diagrama de componentes
-![Diagrama de componentes Ufer](images/ufer_components.png)
+
+![Diagrama de componentes Ufer](images/ufer_components.PNG)
 
 ## Conclusiones
 
