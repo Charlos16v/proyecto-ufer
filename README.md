@@ -1,6 +1,84 @@
 # Scrapper tool for Ufer Website
 
-Comenzamos el proyecto diseñando la página web, ya que nuestra herramienta trabaja sobre ella.
+Comenzamos el proyecto diseñando la página web, ya que nuestra herramienta trabaja sobre ella. 
+
+Hemos conseguido hacer una página web bien diseñada bajo nuestro punto de vista, hemos creado una herramienta que recoge todos los enlaces de nuestra página y una que obtiene todos los datos que necesitamos y los introduce en un diccionario. Finalmente, hemos realizado una conexión con MongoDB en la que subimos todos nuestros diccionarios como documentos en una colección.
+
+[![python version](https://img.shields.io/badge/python-v3.7-blue)](https://www.python.org/downloads/)
+
+## Comenzando
+
+A continuación, vamos a dar las instrucciones necesarias que te permitirán obtener una copia del proyecto en funcionamiento. 
+> Es importante destacar que nuestra herramienta depende de su respectivo fichero de configuración. Puedes configurarlo en `src/services/config/ufer_conf.py`.
+
+### Pre-requisitos
+* `Python3`
+* `pip3`
+* `Git`
+
+### Instalación
+Hay dos formas de hacer la instalación de nuestro proyecto, a continuación serán explicadas paso a paso.
+
+#### Manual
+* Instalar virtualenv:
+
+`$ sudo apt-get install python3-venv`
+
+* Crea el directorio y sitúate en él:
+
+```
+$ mkdir ./proyecto_ufer 
+$ cd proyecto_ufer
+```
+
+* Clona el proyecto:
+
+`https://github.com/Charlos16v/proyecto-ufer.git`
+
+* Activa el entorno virutal e instala las dependencias:
+
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip3 install -r requirements.txt
+```
+
+* Ejecutar la herramienta:
+`python3 main.py`
+
+#### Como distribución
+
+* Crea el directorio y sitúate en él:
+
+```
+$ mkdir ./proyecto_ufer 
+$ cd proyecto_ufer
+```
+
+* Clona el proyecto:
+`https://github.com/Charlos16v/proyecto-ufer.git`
+
+* Activa el entorno virutal:
+
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip3 install -r requirements.txt
+```
+
+* Instala el proyecto:
+
+`UFER_Scrapping_TOOL-0.0.1-py3-none-any.whl`
+
+* Ejecutar la herramienta:
+`python3 main.py`
+
+## Autores
+* Carlos Uriel Domínguez Ruiz-Diaz
+* Juan Pastor Ruiz Molina
+
+## License
+Este proyecto está bajo Licencia MIT - mirar archivo `LICENSE` para detalles.
 
 ## Página web
 
@@ -87,7 +165,9 @@ En la página de producto tenemos una sección product-page que contiene un el d
 
 Consideramos que actualmente es indispensable que cualquier página web sea mínimamente responsive, y que debe visualizarse correctamente sin importar el dispositivo utilizado. Para esto utilizamos los @media, indicando a partir de que cierta anchura han de modificarse los estilos. En nuestra página hemos tratado de conseguir que la visualización sea correcta a cualquier anchura.
 
-## Config
+## Componentes de la herramienta de scrapping
+
+### Config
 
 Disponemos del módulo de configuración de la herramienta y disponemos de cuatro apartados a configurar.
 
@@ -99,7 +179,7 @@ En el tercer apartado **KEYS** indicamos las palabras clave a la hora de encontr
 
 En el cuarto apartado **TYPE** aportamos como queremos tratar los datos de los identificadores indicados anteriormente.
 
-## Crawler
+### Crawler
 
 Una vez el módulo **CONFIG** haya quedado con el contenido especificado, el módulo **CRAWLER** tomará esos valores como configuración para extraer las páginas a scrapear
 
@@ -115,7 +195,7 @@ El módulo **web_crawler** está compuesto por varias funciones:
 - **`is_for_scrapp`**: Función encargada de comprobar si en un enlace hay contenido que nos interesa scrapear o no, para ello utiliza los valores aportamos en **KEYS** del módulo **CONF**, devuelve un valor booleano.
 - **`repair_link`**: Función encargada de “reparar” links inválidos(falta de http) ya que en nuestra web los enlaces están indicados con rutas relativas a documentos HTML, **repair_link** añade el dominio indicado en **UFER_DOMAIN** justo delante de la ruta relativa, permitiendo así acceder a ella con un **request**.
 
-## Scrapper
+### Scrapper
 
 El módulo scrapper es el encargado de extraer el contenido de las páginas web obtenidas por el módulo **CRAWLER**.
 
@@ -132,7 +212,7 @@ El módulo scrapp está compuesto por varias funciones:
 * **`get_values_on_links`**: Función encargada de recorrer una lista de enlaces, y para cada enlace extraer contenido, crear un diccionario y enviarlo a **MongoDB**
 * **`get_all_data`**: Es la función que hace de unión entre la lista de enlaces extraída por **web_crawler** con la extracción de cada enlaces con **get_values_on_links**.
 
-## Repository
+### Repository
 
 Es el módulo que contiene los archivos relacionados con la conexión a la base de datos.
 
@@ -158,6 +238,8 @@ Consideramos que es un desarrollo en espiral por los siguientes motivos:
 
 - Es una mezcla del **modelo en cascada** y el **modelo basado en prototipos**
 - Nuestra aplicación se ha ido construyendo con versiones iniciales de cada módulo, que después han ido evolucionando.
+
+## Justificación del tiempo invertido
 
 ## Tecnologías y herramientas utilizadas
 
@@ -189,7 +271,7 @@ Consideramos que es un desarrollo en espiral por los siguientes motivos:
 
 ## Conclusiones
 
-La idea para nuestro proyecto era bastante ambiciosa teniendo en cuenta nuestras competencias y el tiempo del que disponíamos, aún así, estamos muy orgullosos del resultado. Hemos conseguido hacer una página web bien diseñada bajo nuestro punto de vista, hemos creado una herramienta que recoge todos los enlaces de nuestra página y una que obtiene todos los datos que necesitamos y los introduce en un diccionario. Finalmente, hemos realizado una conexión con MongoDB en la que subimos todos nuestros diccionarios como documentos en una colección.
+La idea para nuestro proyecto era bastante ambiciosa teniendo en cuenta nuestras competencias y el tiempo del que disponíamos. Está claro que está lejos de ser perfecto pero creemos que podemos estar contentos del trabajo que hemos realizado, que además, nos ha hecho aprender de los errores cometidos y creemos que nos ayudará a no repetirlos o tenerlos más en cuenta en futuros proyectos. Dicho todo esto, estamos muy orgullosos del resultado. 
 
 ### Posibles mejoras
 
@@ -203,3 +285,4 @@ Estas son algunas de las ideas que pensamos en introducir en nuestro proyecto y 
 
 Dada nuestra prácticamente nula experiencia hemos encontrado dificultades durante el comienzo del desarrollo, ya que comenzar a desarrollar y que funcionara nos distrajo de hacerlo siguiendo unas buenas prácticas, como por ejemplo hacer TDD.
 Otra dificultad grande que nos hemos encontrado es la gestión del tiempo, ya que nunca nos habíamos enfrentado a un proyecto de esta magnitud, nos ha sido difícil tener una buena gestión y organización del tiempo, no hemos dividido correctamente y de forma equitativa el trabajo a realizar.
+
