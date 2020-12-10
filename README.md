@@ -1,6 +1,6 @@
 # Scrapper tool for Ufer Website
 
-Comenzamos el proyecto diseñando la página web, ya que nuestra herramienta trabaja sobre ella. 
+Comenzamos el proyecto diseñando la página web, ya que nuestra herramienta trabaja sobre ella.
 
 Hemos conseguido hacer una página web bien diseñada bajo nuestro punto de vista, hemos creado una herramienta que recoge todos los enlaces de nuestra página y una que obtiene todos los datos que necesitamos y los introduce en un diccionario. Finalmente, hemos realizado una conexión con MongoDB en la que subimos todos nuestros diccionarios como documentos en una colección.
 
@@ -35,7 +35,7 @@ $ cd proyecto_ufer
 
 `https://github.com/Charlos16v/proyecto-ufer.git`
 
-* Activa el entorno virutal e instala las dependencias:
+* Activa el entorno virtual e instala las dependencias:
 
 ```
 $ python3 -m venv venv
@@ -68,7 +68,9 @@ $ source venv/bin/activate
 
 * Instala el proyecto:
 
-`UFER_Scrapping_TOOL-0.0.1-py3-none-any.whl`
+```
+$ pip3 install UFER_Scrapping_TOOL-0.0.1-py3-none-any.whl
+```
 
 * Ejecutar la herramienta:
 `python3 main.py`
