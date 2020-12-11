@@ -74,7 +74,7 @@ $ source venv/bin/activate
 - Instala el proyecto:
 
 ```
-$ pip3 install UFER_Scrapping_TOOL-1.0-py3-none-any.whl
+$ pip3 install dist/UFER_Scrapping_TOOL-1.0-py3-none-any.whl
 ```
 
 - Ejecutar la herramienta:
