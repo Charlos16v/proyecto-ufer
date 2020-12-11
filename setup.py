@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="UFER_Scrapping_TOOL",
-    version="0.0.1",
+    version="1.0",
     author="Carlos Uriel Dominguez Ruiz Diaz y Juan Pastor Ruiz Molina",
     author_email="cdominguez@cifpfbmoll.eu jruiz@cifpfbmoll.eu",
     description="A small tool for scrapp websites.",
