@@ -8,34 +8,38 @@ Hemos conseguido hacer una página web bien diseñada bajo nuestro punto de vist
 
 ## Comenzando
 
-A continuación, vamos a dar las instrucciones necesarias que te permitirán obtener una copia del proyecto en funcionamiento. 
+A continuación, vamos a dar las instrucciones necesarias que te permitirán obtener una copia del proyecto en funcionamiento.
+
 > Es importante destacar que nuestra herramienta depende de su respectivo fichero de configuración. Puedes configurarlo en `src/services/config/ufer_conf.py`.
 
 ### Pre-requisitos
-* `Python3`
-* `pip3`
-* `Git`
+
+- `Python3`
+- `pip3`
+- `Git`
 
 ### Instalación
+
 Hay dos formas de hacer la instalación de nuestro proyecto, a continuación serán explicadas paso a paso.
 
 #### Manual
-* Instalar virtualenv:
+
+- Instalar virtualenv:
 
 `$ sudo apt-get install python3-venv`
 
-* Crea el directorio y sitúate en él:
+- Crea el directorio y sitúate en él:
 
 ```
-$ mkdir ./proyecto_ufer 
+$ mkdir ./proyecto_ufer
 $ cd proyecto_ufer
 ```
 
-* Clona el proyecto:
+- Clona el proyecto:
 
 `https://github.com/Charlos16v/proyecto-ufer.git`
 
-* Activa el entorno virtual e instala las dependencias:
+- Activa el entorno virtual e instala las dependencias:
 
 ```
 $ python3 -m venv venv
@@ -43,22 +47,23 @@ $ source venv/bin/activate
 (venv) $ pip3 install -r requirements.txt
 ```
 
-* Ejecutar la herramienta:
-`python3 main.py`
+- Ejecutar la herramienta:
+  `python3 main.py`
 
 #### Como distribución
 
-* Crea el directorio y sitúate en él:
+- Crea el directorio y sitúate en él:
 
 ```
-$ mkdir ./proyecto_ufer 
+$ mkdir ./proyecto_ufer
 $ cd proyecto_ufer
 ```
 
-* Clona el proyecto:
+- Clona el proyecto:
+
 `https://github.com/Charlos16v/proyecto-ufer.git`
 
-* Activa el entorno virutal:
+- Activa el entorno virutal:
 
 ```
 $ python3 -m venv venv
@@ -66,20 +71,22 @@ $ source venv/bin/activate
 (venv) $ pip3 install -r requirements.txt
 ```
 
-* Instala el proyecto:
+- Instala el proyecto:
 
 ```
-$ pip3 install UFER_Scrapping_TOOL-0.0.1-py3-none-any.whl
+$ pip3 install UFER_Scrapping_TOOL-1.0-py3-none-any.whl
 ```
 
-* Ejecutar la herramienta:
-`python3 main.py`
+- Ejecutar la herramienta:
+  `python3 main.py`
 
 ## Autores
-* Carlos Uriel Domínguez Ruiz-Diaz
-* Juan Pastor Ruiz Molina
+
+- Carlos Uriel Domínguez Ruiz-Diaz
+- Juan Pastor Ruiz Molina
 
 ## License
+
 Este proyecto está bajo Licencia MIT - mirar archivo `LICENSE` para detalles.
 
 ## Página web
@@ -226,7 +233,6 @@ Es el encargado de hacer la conexión con la base de datos e introducir cada doc
 
 Hemos decidido crear un esquema de validación para nuestra colección. Hemos declarado que lo campos requeridos serán name, description y precio, y que serán tipo string, string y entero, respectivamente.
 
-
 ## Descripción técnica
 
 ### Arquitectura
@@ -259,7 +265,9 @@ También mencionaremos que nuestra página web está alojada en un servicio en l
 - MacDown
 
 ### Diagrama de componentes
+
 ![Diagrama de componentes](images/UFER_components.png)
+
 ## Metodología de desarrollo
 
 El funcionamiento de la aplicación consiste en tomar la salida de un módulo como entrada del siguiente, por lo que también consideramos que se trata de un **modelo de desarrollo en espiral**.
@@ -268,8 +276,12 @@ Consideramos que es un desarrollo en espiral por los siguientes motivos:
 - Es una mezcla del **modelo en cascada** y el **modelo basado en prototipos**
 - Nuestra aplicación se ha ido construyendo con versiones iniciales de cada módulo, que después han ido evolucionando.
 
+## Esquema de branches
+
+![Esquema de branches](images/branches.png)
 
 ## Justificación del tiempo invertido
+
 Analizando el gráfico de Clockify podemos ver que hemos invertido un tiempo significante en la página web, ya que teníamos claro que no queríamos hacer algo básico y simplemente funcional.
 
 En cuanto la herramienta de scrapping, hemos querido dar importancia a crear una herramienta funcional independientemente, por así decirlo, de la página a scrappear, somos conscientes de que no es una herramienta universal pero hemos pretendido poder abarcar lo máximo posible mediante el fichero de configuración.
@@ -280,7 +292,7 @@ Debemos tener en cuenta que no teníamos los conocimientos para hacer muchas de 
 
 ## Conclusiones
 
-La idea para nuestro proyecto era bastante ambiciosa teniendo en cuenta nuestras competencias y el tiempo del que disponíamos. Está claro que está lejos de ser perfecto pero creemos que podemos estar contentos del trabajo que hemos realizado, que además, nos ha hecho aprender de los errores cometidos y creemos que nos ayudará a no repetirlos o tenerlos más en cuenta en futuros proyectos. Dicho todo esto, estamos muy orgullosos del resultado. 
+La idea para nuestro proyecto era bastante ambiciosa teniendo en cuenta nuestras competencias y el tiempo del que disponíamos. Está claro que está lejos de ser perfecto pero creemos que podemos estar contentos del trabajo que hemos realizado, que además, nos ha hecho aprender de los errores cometidos y creemos que nos ayudará a no repetirlos o tenerlos más en cuenta en futuros proyectos. Dicho todo esto, estamos muy orgullosos del resultado.
 
 ### Posibles mejoras
 
@@ -294,4 +306,3 @@ Estas son algunas de las ideas que pensamos en introducir en nuestro proyecto y 
 
 Dada nuestra prácticamente nula experiencia hemos encontrado dificultades durante el comienzo del desarrollo, ya que comenzar a desarrollar y que funcionara nos distrajo de hacerlo siguiendo unas buenas prácticas, como por ejemplo hacer TDD.
 Otra dificultad grande que nos hemos encontrado es la gestión del tiempo, ya que nunca nos habíamos enfrentado a un proyecto de esta magnitud, nos ha sido difícil tener una buena gestión y organización del tiempo, no hemos dividido correctamente y de forma equitativa el trabajo a realizar.
-
