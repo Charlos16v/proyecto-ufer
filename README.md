@@ -63,7 +63,7 @@ $ cd proyecto_ufer
 
 `https://github.com/Charlos16v/proyecto-ufer.git`
 
-- Activa el entorno virutal:
+- Activa el entorno virtual:
 
 ```
 $ python3 -m venv venv
